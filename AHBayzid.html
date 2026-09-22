@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0d1d1f" />
+  <meta name="description" content="Akram Hossain Bayzid — Optometrist at Ispahani Islamia Eye Institute & Hospital. Eye health education, refractive care and patient guidance." />
+  <title>Akram Hossain Bayzid | Optometrist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+
+<style>
+:root{
+  --ink:#0d1d1f;
+  --ink-2:#183236;
+  --muted:#688083;
+  --brand:#0b8277;
+  --brand-2:#0a615a;
+  --aqua:#dff6f1;
+  --lime:#dff08b;
+  --sand:#f4f1e9;
+  --paper:#fbfcfa;
+  --line:#dbe6e2;
+  --white:#fff;
+  --danger:#bd3f38;
+  --danger-soft:#fff0ed;
+  --shadow:0 30px 80px rgba(15,49,48,.10);
+  --radius:28px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);background:var(--paper);font-family:Manrope,Arial,sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
+body.bn{font-family:"Hind Siliguri",sans-serif}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+button,input{font:inherit}
+button{color:inherit}
+::selection{background:var(--lime);color:var(--ink)}
+.container{width:min(1240px,calc(100% - 48px));margin:auto}
+.section-pad{padding:118px 0}
+.soft-bg{background:transparent}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1)}
+.reveal.visible{opacity:1;transform:none}
+
+/* top utility bar */
+.topbar{background:var(--ink);color:#dcebea;font-size:12px;letter-spacing:.01em}
+.topbar-inner{min-height:38px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.topbar a{font-weight:800;color:var(--lime)}
+
+/* floating navigation */
+.site-header{position:sticky;top:0;z-index:60;padding:14px 0;background:linear-gradient(to bottom,rgba(251,252,250,.96),rgba(251,252,250,.76),transparent);backdrop-filter:blur(12px)}
+.nav-wrap{height:72px;border:1px solid rgba(13,29,31,.09);background:rgba(255,255,255,.92);border-radius:22px;padding:0 14px 0 18px;display:flex;align-items:center;justify-content:space-between;gap:24px;box-shadow:0 12px 34px rgba(16,54,52,.06)}
+.brand{display:flex;align-items:center;gap:12px;min-width:245px}
+.brand-mark{width:42px;height:42px;border-radius:13px;background:var(--ink);color:var(--lime);display:grid;place-items:center;font-weight:900;letter-spacing:-.04em}
+.brand-copy{display:flex;flex-direction:column;line-height:1.1}
+.brand-copy strong{font-size:14px;letter-spacing:-.01em}
+.brand-copy small{font-size:11px;color:var(--muted);margin-top:5px;font-weight:700}
+.main-nav{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:800;color:#365256}
+.main-nav a{padding:10px 12px;border-radius:11px;transition:.2s}
+.main-nav a:hover{background:#f0f6f4;color:var(--brand)}
+.nav-actions{display:flex;align-items:center;gap:10px}
+.language-switch{display:flex;background:#eff5f3;border:1px solid #e2ece9;padding:3px;border-radius:12px}
+.lang-btn{border:0;background:transparent;padding:7px 10px;border-radius:9px;color:#668084;font-size:11px;font-weight:900;cursor:pointer}
+.lang-btn.active{background:#fff;color:var(--ink);box-shadow:0 3px 10px rgba(0,0,0,.07)}
+.menu-btn{display:none;width:40px;height:40px;border:0;border-radius:11px;background:var(--ink);color:#fff;cursor:pointer}
+
+/* shared typography */
+.eyebrow{display:inline-flex;align-items:center;gap:9px;margin-bottom:18px;color:var(--brand);font-size:11px;line-height:1;text-transform:uppercase;letter-spacing:.19em;font-weight:900}
+.eyebrow:before{content:"";width:20px;height:2px;background:currentColor}
+.eyebrow.light{color:#a9e8df}
+.hero h1,.section-heading h2,.faq-top h2,.eye-health-grid h2,.emergency-grid h2,.care-grid h2,.final-note h2{margin:0;letter-spacing:-.055em;line-height:.98;font-weight:800}
+.section-heading h2,.faq-top h2,.eye-health-grid h2,.care-grid h2,.final-note h2{font-size:clamp(40px,5vw,68px)}
+
+/* hero */
+.hero{position:relative;padding:70px 0 105px;overflow:hidden}
+.hero:before{content:"";position:absolute;right:-120px;top:40px;width:430px;height:430px;border-radius:50%;background:var(--aqua);filter:blur(2px);z-index:-1}
+.hero:after{content:"";position:absolute;left:-130px;bottom:-220px;width:470px;height:470px;border-radius:50%;border:1px solid #dbe8e4;z-index:-1}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(410px,.92fr);align-items:center;gap:84px}
+.hero-content{padding:42px 0 14px}
+.hero h1{font-size:clamp(56px,6.9vw,96px);max-width:820px}
+.hero h1::first-line{color:var(--ink)}
+.hero-lead{font-size:18px;color:#526c70;max-width:660px;margin:28px 0 0}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
+.btn{min-height:50px;padding:0 20px;border-radius:14px;display:inline-flex;align-items:center;justify-content:center;gap:8px;font-size:13px;font-weight:900;transition:transform .2s ease,background .2s ease,border-color .2s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--ink);color:#fff;box-shadow:0 14px 28px rgba(13,29,31,.14)}
+.btn-primary:hover{background:var(--brand)}
+.btn-secondary{background:#fff;border:1px solid var(--line)}
+.btn-secondary:hover{border-color:#9bbab5}
+.btn-light{background:var(--lime);color:var(--ink);margin-top:16px}
+.hero-note{display:grid;grid-template-columns:30px 1fr;gap:13px;align-items:flex-start;max-width:610px;margin-top:34px;padding-top:22px;border-top:1px solid var(--line)}
+.note-icon{width:30px;height:30px;border-radius:10px;background:var(--aqua);color:var(--brand);display:grid;place-items:center;font-size:12px;font-weight:900}
+.hero-note p{margin:0;color:#75898c;font-size:12px}
+.hero-visual{position:relative;min-height:620px}
+.main-visual{position:absolute;inset:0 12px 30px 34px;border-radius:42px 42px 140px 42px;overflow:hidden;background:#d7ece7;box-shadow:var(--shadow)}
+.main-visual:after{content:"CLINICAL / OPTOMETRY";position:absolute;left:22px;bottom:22px;padding:9px 12px;border-radius:10px;background:rgba(255,255,255,.9);backdrop-filter:blur(12px);font-size:10px;letter-spacing:.16em;font-weight:900;color:var(--ink)}
+.main-visual img{width:100%;height:100%;object-fit:cover}
+.hero-visual:before{content:"01";position:absolute;z-index:2;right:-2px;top:34px;width:68px;height:68px;border-radius:50%;display:grid;place-items:center;background:var(--lime);font-weight:900;font-size:16px;border:9px solid var(--paper)}
+.hero-visual:after{content:"VISION • CARE • GUIDANCE";position:absolute;right:-112px;bottom:146px;transform:rotate(90deg);font-size:10px;font-weight:900;letter-spacing:.2em;color:#7b9294}
+.floating-card{display:none}
+.hero-stat-card{display:none}
+
+/* trust metrics */
+.trust-strip{padding-bottom:34px}
+.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.trust-grid div{position:relative;min-height:112px;padding:22px 22px 20px;border:1px solid var(--line);background:#fff;border-radius:20px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}
+.trust-grid div:after{content:"";position:absolute;width:80px;height:80px;border-radius:50%;right:-32px;bottom:-38px;background:var(--aqua)}
+.trust-grid span{font-size:11px;color:#9aabad;font-weight:900;letter-spacing:.12em}
+.trust-grid strong{font-size:15px;line-height:1.3;max-width:150px}
+
+/* about / bento */
+#about{background:var(--ink);color:#fff;margin:72px 24px 0;border-radius:42px;overflow:hidden}
+#about .container{width:min(1192px,calc(100% - 48px))}
+.about-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:90px;align-items:start}
+#about .section-heading{position:sticky;top:120px}
+#about .eyebrow{color:var(--lime)}
+#about .section-heading h2{color:#fff}
+.about-copy>p{margin:0;color:#b9cbca;font-size:18px;max-width:660px}
+.quote-box{margin-top:30px;padding:24px 26px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.05);border-radius:20px}
+.quote-box p{margin:0;color:#e7f0ef;font-size:14px;font-weight:650}
+.expertise-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px;margin-top:66px;padding-bottom:4px}
+.expertise-card{position:relative;min-height:230px;padding:26px;border-radius:24px;background:#153033;border:1px solid rgba(255,255,255,.08);overflow:hidden;transition:.25s}
+.expertise-card:nth-child(1),.expertise-card:nth-child(4){grid-column:span 7}
+.expertise-card:nth-child(2),.expertise-card:nth-child(3){grid-column:span 5}
+.expertise-card:hover{transform:translateY(-5px);border-color:rgba(223,240,139,.5)}
+.expertise-card:after{content:"";position:absolute;right:-32px;top:-32px;width:100px;height:100px;border-radius:50%;border:1px solid rgba(223,240,139,.18)}
+.expertise-card>span{font-size:11px;color:var(--lime);font-weight:900}
+.expertise-card h3{margin:48px 0 10px;font-size:20px;line-height:1.2}
+.expertise-card p{margin:0;color:#9fb5b3;font-size:13px;max-width:500px}
+
+/* eye health */
+#eye-health{padding-top:138px}
+.eye-health-grid{display:grid;grid-template-columns:.88fr 1.12fr;gap:18px;align-items:stretch}
+.eye-visual{min-height:700px;border-radius:34px;overflow:hidden;background:#dcefea;position:relative}
+.eye-visual:before{content:"EYE HEALTH";position:absolute;z-index:2;left:22px;top:22px;padding:9px 12px;border-radius:10px;background:rgba(13,29,31,.82);color:#fff;font-size:10px;font-weight:900;letter-spacing:.18em}
+.eye-visual img{width:100%;height:100%;object-fit:cover}
+.eye-health-grid>div:last-child{padding:54px 58px;border-radius:34px;background:#fff;border:1px solid var(--line)}
+.eye-health-grid>div>p{margin:22px 0 0;color:var(--muted);font-size:16px;max-width:700px}
+.health-points{margin-top:34px}
+.health-points>div{display:grid;grid-template-columns:48px 1fr;gap:14px;align-items:start;padding:18px 0;border-top:1px solid var(--line)}
+.health-points b{width:32px;height:32px;border-radius:9px;background:var(--aqua);display:grid;place-items:center;color:var(--brand);font-size:10px}
+.health-points span{font-size:13px;color:#405b5f}
+
+/* faq knowledge center */
+#faq{padding-top:130px}
+#faq>.container{display:grid;grid-template-columns:320px minmax(0,1fr);column-gap:54px;align-items:start}
+.faq-top{grid-column:1/-1;display:grid;grid-template-columns:1fr minmax(320px,430px);gap:56px;align-items:end;padding-bottom:40px;margin-bottom:34px;border-bottom:1px solid var(--line)}
+.faq-top h2{max-width:800px}
+.faq-search-wrap{position:relative}
+.faq-search-wrap:before{content:"⌕";position:absolute;left:17px;top:50%;transform:translateY(-54%);font-size:22px;color:#7e9295}
+.faq-search-wrap input{width:100%;height:58px;padding:0 18px 0 48px;border:1px solid var(--line);border-radius:16px;background:#fff;outline:none;color:var(--ink);box-shadow:0 12px 32px rgba(16,54,52,.04)}
+.faq-search-wrap input:focus{border-color:#7fc2ba;box-shadow:0 0 0 4px rgba(11,130,119,.08)}
+.faq-tabs{position:sticky;top:114px;display:flex;flex-direction:column;gap:7px;max-height:calc(100vh - 145px);overflow:auto;padding:4px 8px 12px 0;scrollbar-width:thin}
+.faq-tab{width:100%;border:0;background:transparent;padding:12px 14px;border-radius:12px;text-align:left;cursor:pointer;color:#637c80;font-size:12px;font-weight:850;transition:.2s}
+.faq-tab:hover{background:#edf5f2;color:var(--ink)}
+.faq-tab.active{background:var(--ink);color:#fff}
+.faq-list{min-width:0;border-top:1px solid var(--ink)}
+.faq-item{border-bottom:1px solid var(--line)}
+.faq-q{width:100%;border:0;background:transparent;padding:23px 2px;text-align:left;display:grid;grid-template-columns:1fr 38px;gap:24px;align-items:center;cursor:pointer;font-weight:800;font-size:15px;line-height:1.45}
+.faq-q span:last-child{width:34px;height:34px;border-radius:50%;background:#f0f5f3;display:grid;place-items:center;color:var(--brand);font-size:19px;transition:.25s}
+.faq-item.open .faq-q span:last-child{transform:rotate(45deg);background:var(--aqua)}
+.faq-a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .28s ease}
+.faq-a>div{overflow:hidden}
+.faq-a p{margin:0;padding:0 72px 24px 2px;color:var(--muted);font-size:14px}
+.faq-item.open .faq-a{grid-template-rows:1fr}
+.faq-empty{grid-column:2;text-align:center;padding:40px;border:1px dashed var(--line);border-radius:16px;color:var(--muted)}
+
+/* emergency */
+.emergency-section{margin:40px 24px;background:var(--danger-soft);color:var(--ink);border-radius:40px;overflow:hidden;position:relative}
+.emergency-section:after{content:"!";position:absolute;right:2vw;bottom:-120px;font-size:440px;line-height:1;font-weight:900;color:rgba(189,63,56,.055);pointer-events:none}
+.emergency-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:72px;align-items:center;position:relative;z-index:1}
+.emergency-section .eyebrow{color:var(--danger)}
+.emergency-grid h2{font-size:clamp(46px,5.5vw,74px)}
+.emergency-grid p{color:#7b5b58;max-width:740px;font-size:16px}
+.emergency-card{padding:32px;border-radius:26px;background:#fff;border:1px solid #f0d1cc;box-shadow:0 18px 44px rgba(111,46,40,.08)}
+.emergency-card>span{width:48px;height:48px;border-radius:14px;background:var(--danger);color:#fff;display:grid;place-items:center;font-weight:900;font-size:23px}
+.emergency-card h3{margin:24px 0 10px;font-size:24px}
+.emergency-card p{margin:0;color:#82635f;font-size:14px}
+
+/* specialists bento */
+#specialists{padding-top:128px}
+.section-heading.centered{text-align:left;max-width:870px;margin:0 0 54px}
+.section-heading.centered p{max-width:720px;color:var(--muted);font-size:16px}
+.specialist-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:minmax(210px,auto);gap:14px}
+.specialist-card{padding:24px;border:1px solid var(--line);border-radius:24px;background:#fff;display:flex;flex-direction:column;justify-content:flex-end;transition:.25s;position:relative;overflow:hidden}
+.specialist-card:nth-child(1),.specialist-card:nth-child(8){grid-column:span 2}
+.specialist-card:nth-child(4){background:var(--ink);color:#fff}
+.specialist-card:nth-child(4) p{color:#9fb5b3}
+.specialist-card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(15,49,48,.07)}
+.specialist-card.urgent{background:var(--danger-soft);border-color:#efcbc6}
+.icon-circle{position:absolute;top:22px;left:22px;width:42px;height:42px;border-radius:13px;background:var(--aqua);display:grid;place-items:center;color:var(--brand);font-size:11px;font-weight:900}
+.specialist-card.urgent .icon-circle{background:var(--danger);color:#fff}
+.specialist-card h3{margin:54px 0 8px;font-size:18px}
+.specialist-card p{margin:0;color:var(--muted);font-size:13px}
+
+/* Bangladesh care */
+#care-bd{padding-top:134px}
+.care-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:18px;align-items:stretch}
+.care-grid>div:first-child{padding:56px 58px;border-radius:34px;background:var(--sand)}
+.care-grid>div>p{font-size:16px;color:#647678}
+.check-list{list-style:none;padding:0;margin:30px 0 0}
+.check-list li{position:relative;padding:15px 0 15px 38px;border-top:1px solid rgba(13,29,31,.12);font-size:13px;color:#41575a}
+.check-list li:before{content:"↗";position:absolute;left:0;top:13px;width:25px;height:25px;border-radius:50%;display:grid;place-items:center;background:#fff;color:var(--brand);font-weight:900}
+.care-panel{border-radius:34px;overflow:hidden;background:var(--ink);color:#fff;display:grid;grid-template-rows:minmax(300px,1fr) auto;box-shadow:var(--shadow)}
+.care-panel img{width:100%;height:100%;min-height:360px;object-fit:cover}
+.care-panel-copy{padding:30px 32px 34px}
+.care-panel-copy>span{font-size:10px;text-transform:uppercase;letter-spacing:.18em;color:var(--lime);font-weight:900}
+.care-panel-copy h3{font-size:26px;line-height:1.18;margin:13px 0}
+.care-panel-copy p{margin:0;color:#afc2c0;font-size:13px}
+
+
+/* education & professional background */
+.profile-section{padding:118px 0 38px}
+.profile-shell{display:grid;grid-template-columns:.72fr 1.28fr;gap:18px;align-items:stretch}
+.profile-intro{padding:48px;border:1px solid var(--line);border-radius:34px;background:#fff;display:flex;flex-direction:column;justify-content:space-between;min-height:100%}
+.profile-intro h2{margin:0;font-size:clamp(38px,4.8vw,62px);line-height:1;letter-spacing:-.055em}
+.profile-intro p{margin:24px 0 0;color:var(--muted);font-size:15px}
+.profile-credentials{display:flex;flex-wrap:wrap;gap:8px;margin-top:30px}
+.credential-pill{display:inline-flex;align-items:center;gap:8px;padding:10px 12px;border-radius:999px;background:#f1f7f5;border:1px solid #e0ebe8;color:#34575a;font-size:11px;font-weight:900}
+.credential-pill:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--brand)}
+.profile-detail{padding:48px;border-radius:34px;background:var(--ink);color:#fff;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.profile-detail-card{padding:24px;border:1px solid rgba(255,255,255,.1);border-radius:22px;background:rgba(255,255,255,.045)}
+.profile-detail-card:first-child{grid-column:1/-1}
+.profile-detail-card span{display:block;color:var(--lime);font-size:10px;font-weight:900;letter-spacing:.16em;text-transform:uppercase;margin-bottom:12px}
+.profile-detail-card h3{margin:0 0 10px;font-size:20px;line-height:1.2}
+.profile-detail-card p{margin:0;color:#afc2c0;font-size:13px}
+
+/* contact / social profiles */
+.contact-section{padding:38px 0 34px}
+.contact-shell{padding:42px 44px;border:1px solid var(--line);border-radius:34px;background:var(--sand)}
+.contact-head{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:28px}
+.contact-head h2{margin:0;font-size:clamp(34px,4.3vw,54px);line-height:1;letter-spacing:-.05em}
+.contact-head p{margin:0;max-width:470px;color:var(--muted);font-size:13px}
+.social-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+.social-link{min-height:118px;padding:17px;border:1px solid rgba(13,29,31,.09);border-radius:18px;background:#fff;display:flex;flex-direction:column;justify-content:space-between;transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease}
+.social-link:hover{transform:translateY(-4px);border-color:#a9c8c3;box-shadow:0 16px 34px rgba(15,49,48,.08)}
+.social-icon{width:38px;height:38px;border-radius:12px;background:#eff6f4;display:grid;place-items:center;color:var(--ink)}
+.social-icon svg{width:19px;height:19px;display:block;fill:currentColor}
+.social-link strong{font-size:12px}
+.social-link small{display:block;color:#8ba0a2;font-size:10px;margin-top:3px}
+
+@media(max-width:1100px){
+  .profile-shell{grid-template-columns:1fr}.social-grid{grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:820px){
+  .profile-section{padding:88px 0 28px}.contact-section{padding:28px 0}.profile-intro,.profile-detail,.contact-shell{padding:36px}.contact-head{align-items:flex-start;flex-direction:column;gap:14px}
+}
+@media(max-width:560px){
+  .profile-section{padding-top:84px}.profile-intro,.profile-detail,.contact-shell{padding:26px;border-radius:26px}.profile-detail{grid-template-columns:1fr}.profile-detail-card:first-child{grid-column:auto}.profile-intro h2,.contact-head h2{font-size:36px}.social-grid{grid-template-columns:repeat(2,1fr)}.social-link{min-height:108px}.contact-head{margin-bottom:22px}
+}
+
+/* final note */
+.final-note{padding:118px 0 136px}
+.final-note-inner{display:grid;grid-template-columns:.72fr 1.28fr;gap:90px;align-items:start;padding:58px;border:1px solid var(--line);border-radius:34px;background:#fff;box-shadow:0 24px 70px rgba(16,54,52,.05)}
+.final-note-inner p{margin:0;color:var(--muted);font-size:17px;padding-top:12px}
+
+/* footer */
+footer{margin:0 24px 24px;background:var(--ink);color:#dbe8e7;border-radius:36px;padding:64px 0 22px}
+.footer-grid{display:grid;grid-template-columns:1.35fr 1fr .8fr;gap:64px}
+.footer-brand{margin-bottom:18px}
+.footer-brand .brand-mark{background:var(--lime);color:var(--ink)}
+.footer-brand .brand-copy small{color:#90a7a5}
+.footer-grid p{font-size:12px;color:#96aaa8;max-width:440px}
+.footer-grid>div:last-child{display:flex;flex-direction:column;gap:8px}
+.footer-grid>div:last-child a{font-size:12px;color:#b7c7c5}
+.footer-bottom{margin-top:48px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;gap:20px;font-size:10px;color:#7f9795}
+
+@media(max-width:1100px){
+  .main-nav{display:none;position:absolute;top:94px;left:24px;right:24px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:12px;box-shadow:var(--shadow);flex-direction:column;align-items:stretch}
+  .main-nav.open{display:flex}.menu-btn{display:grid;place-items:center}.brand{min-width:0}
+  .hero-grid{grid-template-columns:1fr .85fr;gap:42px}.hero h1{font-size:clamp(52px,7vw,74px)}.hero-visual{min-height:540px}
+  .about-grid{grid-template-columns:1fr;gap:38px}#about .section-heading{position:static}.expertise-card:nth-child(n){grid-column:span 6}
+  .eye-health-grid{grid-template-columns:1fr 1fr}.eye-health-grid>div:last-child{padding:40px}.eye-visual{min-height:620px}
+  .specialist-grid{grid-template-columns:repeat(2,1fr)}.specialist-card:nth-child(n){grid-column:span 1}.specialist-card:nth-child(1),.specialist-card:nth-child(8){grid-column:span 2}
+}
+
+@media(max-width:820px){
+  .container{width:min(100% - 32px,1240px)}.section-pad{padding:88px 0}
+  .hero{padding-top:36px}.hero-grid,.eye-health-grid,.emergency-grid,.care-grid,.final-note-inner{grid-template-columns:1fr}.hero-grid{gap:38px}.hero-content{padding-top:20px}.hero-visual{min-height:520px}.main-visual{inset:0 24px 24px 24px}.hero-visual:after{display:none}
+  .trust-grid{grid-template-columns:repeat(2,1fr)}
+  #about,.emergency-section,footer{margin-left:12px;margin-right:12px}.expertise-card:nth-child(n){grid-column:span 12}
+  .eye-visual{min-height:500px}.eye-health-grid>div:last-child{padding:36px}
+  #faq>.container{grid-template-columns:1fr}.faq-top{grid-column:1;grid-template-columns:1fr;gap:24px}.faq-tabs{position:static;flex-direction:row;overflow-x:auto;max-height:none;padding:0 0 12px;margin-bottom:16px}.faq-tab{width:auto;white-space:nowrap}.faq-list{grid-column:1}.faq-empty{grid-column:1}
+  .care-grid>div:first-child{padding:40px}.final-note-inner{gap:28px;padding:42px}
+  .footer-grid{grid-template-columns:1fr 1fr}.footer-grid>div:first-child{grid-column:1/-1}
+}
+
+@media(max-width:560px){
+  .container{width:min(100% - 24px,1240px)}.topbar-inner{min-height:42px}.topbar-inner span{display:none}.nav-wrap{height:64px;padding-left:12px}.brand-mark{width:38px;height:38px}.brand-copy strong{font-size:12px}.brand-copy small{font-size:10px}.language-switch{margin-left:auto}.lang-btn{padding:6px 8px}.menu-btn{width:38px;height:38px}.main-nav{top:82px;left:12px;right:12px}
+  .hero{padding:32px 0 72px}.hero h1{font-size:45px;line-height:1.01}.hero-lead{font-size:15px}.hero-actions .btn{width:100%}.hero-visual{min-height:410px}.main-visual{inset:0 6px 18px 18px;border-radius:30px 30px 90px 30px}.hero-visual:before{width:58px;height:58px;border-width:7px;right:-4px}
+  .trust-grid{grid-template-columns:1fr 1fr;gap:8px}.trust-grid div{min-height:100px;padding:17px}.trust-grid strong{font-size:12px}
+  #about{border-radius:28px}.section-heading h2,.faq-top h2,.eye-health-grid h2,.care-grid h2,.final-note h2{font-size:38px}.about-copy>p{font-size:15px}.expertise-grid{margin-top:42px}.expertise-card{min-height:210px;padding:22px}
+  #eye-health{padding-top:95px}.eye-visual{min-height:390px}.eye-health-grid>div:last-child{padding:28px;border-radius:26px}.health-points>div{grid-template-columns:38px 1fr}
+  #faq{padding-top:96px}.faq-top{padding-bottom:28px;margin-bottom:20px}.faq-q{font-size:14px;padding:20px 0}.faq-a p{padding-right:10px}
+  .emergency-section{border-radius:28px;margin-top:16px;margin-bottom:16px}.emergency-grid h2{font-size:42px}.emergency-card{padding:24px}
+  .specialist-grid{grid-template-columns:1fr}.specialist-card:nth-child(n){grid-column:1}.specialist-card{min-height:200px}
+  .care-grid>div:first-child{padding:30px;border-radius:26px}.care-panel{border-radius:26px}.care-panel img{min-height:280px}.final-note{padding-bottom:96px}.final-note-inner{padding:30px;border-radius:26px}.final-note-inner p{font-size:15px}
+  footer{border-radius:28px;padding-top:50px}.footer-grid{grid-template-columns:1fr;gap:30px}.footer-grid>div:first-child{grid-column:auto}.footer-bottom{flex-direction:column}.main-visual:after{font-size:8px}
+}
+</style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span data-en="Patient education • Eye health • Refractive care" data-bn="রোগী শিক্ষা • চোখের স্বাস্থ্য • রিফ্র্যাকটিভ কেয়ার">Patient education • Eye health • Refractive care</span>
+      <a href="#emergency" data-en="Eye emergency guidance →" data-bn="চোখের জরুরি নির্দেশনা →">Eye emergency guidance →</a>
+    </div>
+  </div>
+
+  <header class="site-header" id="home">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" aria-label="Home">
+        <span class="brand-mark">AB</span>
+        <span class="brand-copy">
+          <strong>Akram Hossain Bayzid</strong>
+          <small data-en="Optometrist" data-bn="অপটোমেট্রিস্ট">Optometrist</small>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="#about" data-en="About" data-bn="পরিচিতি">About</a>
+        <a href="#eye-health" data-en="Eye Health" data-bn="চোখ নিয়ে জানুন">Eye Health</a>
+        <a href="#faq" data-en="Questions" data-bn="জিজ্ঞাসা">Questions</a>
+        <a href="#specialists" data-en="Specialists" data-bn="কোন বিশেষজ্ঞ">Specialists</a>
+        <a href="#care-bd" data-en="Eye Care in BD" data-bn="বাংলাদেশে সেবা">Eye Care in BD</a>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="language-switch" role="group" aria-label="Language selector">
+          <button class="lang-btn active" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="bn">বাংলা</button>
+        </div>
+        <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section-pad">
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <div class="eyebrow" data-en="CLINICAL OPTOMETRIST • DHAKA" data-bn="ক্লিনিক্যাল অপটোমেট্রি • ঢাকা">CLINICAL OPTOMETRIST • DHAKA</div>
+          <h1 data-en="Clearer vision begins with the right eye assessment." data-bn="সঠিক চোখ পরীক্ষাই পরিষ্কার দৃষ্টির প্রথম ধাপ।">Clearer vision begins with the right eye assessment.</h1>
+          <p class="hero-lead" data-en="Professional optometric care, clinical support and practical eye-health education focused on accurate assessment, patient comfort and responsible referral." data-bn="সঠিক দৃষ্টি মূল্যায়ন, রোগীর স্বাচ্ছন্দ্য এবং প্রয়োজন অনুযায়ী উপযুক্ত বিশেষজ্ঞের কাছে রেফারেলের ওপর ভিত্তি করে পেশাদার অপটোমেট্রিক সেবা, ক্লিনিক্যাল সহায়তা ও চোখের স্বাস্থ্যবিষয়ক তথ্য।">Professional optometric care, clinical support and practical eye-health education focused on accurate assessment, patient comfort and responsible referral.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#faq" data-en="Explore Eye Questions" data-bn="চোখের প্রশ্নগুলো দেখুন">Explore Eye Questions</a>
+            <a class="btn btn-secondary" href="#about" data-en="About Akram" data-bn="আকরাম সম্পর্কে">About Akram</a>
+          </div>
+          <div class="hero-note">
+            <span class="note-icon">i</span>
+            <p data-en="Health information on this website is educational and does not replace an in-person eye examination." data-bn="এই ওয়েবসাইটের স্বাস্থ্যবিষয়ক তথ্য শিক্ষামূলক; এটি সরাসরি চোখ পরীক্ষা বা চিকিৎসকের পরামর্শের বিকল্প নয়।">Health information on this website is educational and does not replace an in-person eye examination.</p>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="visual-card main-visual">
+            <img src="/Images/heroimage.png" alt="Professional eye care illustration" />
+          </div>
+         
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-strip">
+      <div class="container trust-grid">
+        <div><span>01</span><strong data-en="Accurate refraction" data-bn="সঠিক রিফ্র্যাকশন">Accurate refraction</strong></div>
+        <div><span>02</span><strong data-en="Diagnostic support" data-bn="ডায়াগনস্টিক সহায়তা">Diagnostic support</strong></div>
+        <div><span>03</span><strong data-en="Clinical teamwork" data-bn="ক্লিনিক্যাল টিমওয়ার্ক">Clinical teamwork</strong></div>
+        <div><span>04</span><strong data-en="Responsible referral" data-bn="উপযুক্ত রেফারেল">Responsible referral</strong></div>
+      </div>
+    </section>
+
+    <section class="section-pad" id="about">
+      <div class="container about-grid">
+        <div class="section-heading reveal">
+          <div class="eyebrow" data-en="ABOUT" data-bn="পরিচিতি">ABOUT</div>
+          <h2 data-en="Optometric care within a multidisciplinary eye hospital." data-bn="একটি মাল্টি-স্পেশালিটি চক্ষু হাসপাতালে অপটোমেট্রিক সেবা।">Optometric care within a multidisciplinary eye hospital.</h2>
+        </div>
+        <div class="about-copy reveal">
+          <p data-en="Akram Hossain Bayzid currently works as an Optometrist at Ispahani Islamia Eye Institute & Hospital, Farmgate, Dhaka-1215 — one of Bangladesh’s long-established and well-known multidisciplinary eye hospitals, recognized for eye care, education and training." data-bn="আকরাম হোসেন বায়জিদ বর্তমানে ইস্পাহানী ইসলামিয়া চক্ষু ইনস্টিটিউট ও হাসপাতাল, ফার্মগেট, ঢাকা-১২১৫-এ অপটোমেট্রিস্ট হিসেবে কর্মরত। এটি বাংলাদেশের অন্যতম প্রাচীন ও সুপরিচিত মাল্টি-স্পেশালিটি চক্ষু হাসপাতাল, যা চক্ষু চিকিৎসা, শিক্ষা ও প্রশিক্ষণের জন্য দীর্ঘদিনের সুনাম অর্জন করেছে।">Akram Hossain Bayzid currently works as an Optometrist at Ispahani Islamia Eye Institute & Hospital, Farmgate, Dhaka-1215 — one of Bangladesh’s long-established and well-known multidisciplinary eye hospitals, recognized for eye care, education and training.</p>
+          <div class="quote-box">
+            <p data-en="Professional goal: to support accurate vision care, improve patient outcomes and continuously develop clinical knowledge, technical skill and professional competence." data-bn="পেশাগত লক্ষ্য: সঠিক দৃষ্টিসেবা প্রদান, রোগীর অবস্থার উন্নতি সাধন এবং ক্লিনিক্যাল জ্ঞান, প্রযুক্তিগত দক্ষতা ও পেশাগত সক্ষমতার ধারাবাহিক উন্নয়ন।">Professional goal: to support accurate vision care, improve patient outcomes and continuously develop clinical knowledge, technical skill and professional competence.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container expertise-grid">
+        <article class="expertise-card reveal"><span>01</span><h3 data-en="Subspecialty support" data-bn="সাব-স্পেশালিটি সহায়তা">Subspecialty support</h3><p data-en="Optometric and clinical support across glaucoma, cataract, cornea, retina, pediatric ophthalmology, oculoplasty, DCR, investigation and outpatient services." data-bn="গ্লুকোমা, ছানি, কর্নিয়া, রেটিনা, পেডিয়াট্রিক অফথালমোলজি, অকুলোপ্লাস্টি, DCR, ইনভেস্টিগেশন ও আউটডোর সেবায় অপটোমেট্রিক ও ক্লিনিক্যাল সহায়তা।">Optometric and clinical support across glaucoma, cataract, cornea, retina, pediatric ophthalmology, oculoplasty, DCR, investigation and outpatient services.</p></article>
+        <article class="expertise-card reveal"><span>02</span><h3 data-en="Pre & post-operative assessment" data-bn="অস্ত্রোপচারের আগে ও পরে মূল্যায়ন">Pre & post-operative assessment</h3><p data-en="Support with refraction, diagnostic assessment, follow-up and pre/post-operative patient evaluation where applicable." data-bn="প্রযোজ্য ক্ষেত্রে রিফ্র্যাকশন, রোগ নির্ণয়মূলক মূল্যায়ন, ফলো-আপ এবং অস্ত্রোপচারের আগে ও পরে রোগী মূল্যায়নে সহায়তা।">Support with refraction, diagnostic assessment, follow-up and pre/post-operative patient evaluation where applicable.</p></article>
+        <article class="expertise-card reveal"><span>03</span><h3 data-en="Diagnostic instruments" data-bn="ডায়াগনস্টিক যন্ত্র">Diagnostic instruments</h3><p data-en="Experienced with OCT, HVFA, Pentacam, CFP, IOL Master and Manual Keratometry for clinical testing and evaluation." data-bn="OCT, HVFA, Pentacam, CFP, IOL Master এবং Manual Keratometry ব্যবহার করে ক্লিনিক্যাল পরীক্ষা ও মূল্যায়নে অভিজ্ঞ।">Experienced with OCT, HVFA, Pentacam, CFP, IOL Master and Manual Keratometry for clinical testing and evaluation.</p></article>
+        <article class="expertise-card reveal"><span>04</span><h3 data-en="Team-based care" data-bn="সমন্বিত চিকিৎসাসেবা">Team-based care</h3><p data-en="Works collaboratively with ophthalmologists, optometrists and other clinical professionals to support patient-centred, evidence-informed eye care." data-bn="রোগীকেন্দ্রিক ও প্রমাণভিত্তিক চোখের সেবা নিশ্চিত করতে চক্ষুবিশেষজ্ঞ, অপটোমেট্রিস্ট ও অন্যান্য ক্লিনিক্যাল কর্মীদের সঙ্গে সমন্বিতভাবে কাজ করেন।">Works collaboratively with ophthalmologists, optometrists and other clinical professionals to support patient-centred, evidence-informed eye care.</p></article>
+      </div>
+    </section>
+
+    <section class="section-pad soft-bg" id="eye-health">
+      <div class="container eye-health-grid">
+        <div class="eye-visual reveal" style="height:100%;"><img src="/Images/Image02.png" /></div>
+        <div class="reveal">
+          <div class="eyebrow" data-en="KNOW YOUR EYES" data-bn="চোখ নিয়ে জানুন">KNOW YOUR EYES</div>
+          <h2 data-en="Simple habits and timely checks can protect vision." data-bn="সহজ কিছু অভ্যাস ও সময়মতো পরীক্ষা দৃষ্টি সুরক্ষায় সাহায্য করতে পারে।">Simple habits and timely checks can protect vision.</h2>
+          <p data-en="The eyes are among our most important sensory organs. Regular care and proper examination help identify refractive errors and other eye problems early." data-bn="চোখ আমাদের শরীরের অন্যতম গুরুত্বপূর্ণ ইন্দ্রিয়। নিয়মিত যত্ন ও সঠিক পরীক্ষা Refractive Errorসহ বিভিন্ন চোখের সমস্যা দ্রুত শনাক্ত করতে সাহায্য করে।">The eyes are among our most important sensory organs. Regular care and proper examination help identify refractive errors and other eye problems early.</p>
+          <div class="health-points">
+            <div><b>01</b><span data-en="Blurred distance or near vision may be caused by Myopia, Hypermetropia or Astigmatism." data-bn="দূর বা কাছে ঝাপসা দেখার কারণ Myopia, Hypermetropia বা Astigmatism হতে পারে।">Blurred distance or near vision may be caused by Myopia, Hypermetropia or Astigmatism.</span></div>
+            <div><b>02</b><span data-en="Screen use can contribute to eye strain and dryness; regular breaks and proper ergonomics help." data-bn="দীর্ঘসময় স্ক্রিন ব্যবহারে চোখে ক্লান্তি ও শুষ্কতা হতে পারে; নিয়মিত বিরতি ও সঠিক ergonomics উপকারী।">Screen use can contribute to eye strain and dryness; regular breaks and proper ergonomics help.</span></div>
+            <div><b>03</b><span data-en="Children’s vision problems should be identified early to support normal learning and visual development." data-bn="শিশুদের দৃষ্টিশক্তির সমস্যা দ্রুত শনাক্ত করা স্বাভাবিক শিক্ষা ও visual development-এর জন্য গুরুত্বপূর্ণ।">Children’s vision problems should be identified early to support normal learning and visual development.</span></div>
+            <div><b>04</b><span data-en="Diabetes, high blood pressure and sudden visual changes may require comprehensive eye evaluation." data-bn="ডায়াবেটিস, উচ্চ রক্তচাপ এবং হঠাৎ দৃষ্টির পরিবর্তনে পূর্ণাঙ্গ চোখ পরীক্ষা প্রয়োজন হতে পারে।">Diabetes, high blood pressure and sudden visual changes may require comprehensive eye evaluation.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad" id="faq">
+      <div class="container">
+        <div class="faq-top reveal">
+          <div>
+            <div class="eyebrow" data-en="EYE QUESTIONS" data-bn="জিজ্ঞাসা">EYE QUESTIONS</div>
+            <h2 data-en="Answers to common questions about eyes and vision." data-bn="চোখ ও দৃষ্টিশক্তি সম্পর্কে সাধারণ প্রশ্নের উত্তর।">Answers to common questions about eyes and vision.</h2>
+          </div>
+          <div class="faq-search-wrap">
+            <input id="faqSearch" type="search" placeholder="Search: myopia, glaucoma, lens..." aria-label="Search eye questions" />
+          </div>
+        </div>
+
+        <div class="faq-tabs" id="faqTabs"></div>
+        <div class="faq-list" id="faqList"></div>
+        <div class="faq-empty" id="faqEmpty" hidden data-en="No matching question found." data-bn="মিল পাওয়া কোনো প্রশ্ন পাওয়া যায়নি।">No matching question found.</div>
+      </div>
+    </section>
+
+    <section class="section-pad emergency-section" id="emergency">
+      <div class="container emergency-grid">
+        <div class="reveal">
+          <div class="eyebrow light" data-en="WHEN IT MAY BE URGENT" data-bn="কখন জরুরি হতে পারে">WHEN IT MAY BE URGENT</div>
+          <h2 data-en="Some eye symptoms should not wait." data-bn="কিছু চোখের উপসর্গে অপেক্ষা করা উচিত নয়।">Some eye symptoms should not wait.</h2>
+          <p data-en="Seek urgent eye care for sudden vision loss, severe eye pain, significant trauma, chemical injury, new flashes with many floaters, a curtain-like shadow, or a red eye with major vision change." data-bn="হঠাৎ দৃষ্টিশক্তি কমে যাওয়া, তীব্র চোখের ব্যথা, গুরুতর আঘাত, chemical injury, নতুন flashes-এর সঙ্গে অনেক floaters, পর্দার মতো shadow, অথবা তীব্র লাল চোখের সঙ্গে দৃষ্টির বড় পরিবর্তন হলে দ্রুত eye emergency বা Ophthalmologist-এর পরামর্শ নিন।">Seek urgent eye care for sudden vision loss, severe eye pain, significant trauma, chemical injury, new flashes with many floaters, a curtain-like shadow, or a red eye with major vision change.</p>
+          <a href="#specialists" class="btn btn-light" data-en="Find the right specialist" data-bn="সঠিক বিশেষজ্ঞ সম্পর্কে জানুন">Find the right specialist</a>
+        </div>
+        <div class="emergency-card reveal">
+          <span>!</span>
+          <h3 data-en="Chemical in the eye?" data-bn="চোখে রাসায়নিক পদার্থ ঢুকেছে?">Chemical in the eye?</h3>
+          <p data-en="Do not delay. Rinse the eye thoroughly with plenty of clean water and seek urgent medical care. Do not rub the eye." data-bn="দেরি করবেন না। প্রচুর পরিষ্কার পানি দিয়ে চোখ ধুয়ে দ্রুত চিকিৎসা নিন। চোখ ঘষবেন না।">Do not delay. Rinse the eye thoroughly with plenty of clean water and seek urgent medical care. Do not rub the eye.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad" id="specialists">
+      <div class="container">
+        <div class="section-heading centered reveal">
+          <div class="eyebrow" data-en="RIGHT SPECIALIST" data-bn="কোন রোগে কোন বিশেষজ্ঞ">RIGHT SPECIALIST</div>
+          <h2 data-en="Which eye-care professional may be appropriate?" data-bn="কোন সমস্যায় কোন চক্ষু বিশেষজ্ঞ উপযুক্ত হতে পারেন?">Which eye-care professional may be appropriate?</h2>
+          <p data-en="The correct specialist depends on the suspected condition. A comprehensive eye examination can help guide referral when the diagnosis is not yet known." data-bn="সন্দেহভাজন সমস্যার ধরন অনুযায়ী বিশেষজ্ঞ নির্ধারণ হয়। রোগ সম্পর্কে নিশ্চিত না হলে comprehensive eye examination উপযুক্ত referral নির্ধারণে সাহায্য করতে পারে।">The correct specialist depends on the suspected condition. A comprehensive eye examination can help guide referral when the diagnosis is not yet known.</p>
+        </div>
+        <div class="specialist-grid">
+          <article class="specialist-card reveal"><div class="icon-circle">R</div><h3 data-en="Power / glasses" data-bn="চোখের পাওয়ার / চশমা">Power / glasses</h3><p data-en="Optometrist for primary refractive assessment; Ophthalmologist if ocular disease is suspected." data-bn="প্রাথমিক refractive assessment-এর জন্য Optometrist; ocular disease সন্দেহ হলে Ophthalmologist।">Optometrist for primary refractive assessment; Ophthalmologist if ocular disease is suspected.</p></article>
+          <article class="specialist-card reveal"><div class="icon-circle">C</div><h3 data-en="Cataract" data-bn="ছানি">Cataract</h3><p data-en="Ophthalmologist, especially a Cataract / Anterior Segment specialist." data-bn="Ophthalmologist, বিশেষ করে Cataract / Anterior Segment specialist।">Ophthalmologist, especially a Cataract / Anterior Segment specialist.</p></article>
+          <article class="specialist-card reveal"><div class="icon-circle">G</div><h3 data-en="Glaucoma" data-bn="গ্লুকোমা">Glaucoma</h3><p data-en="Glaucoma Specialist or Ophthalmologist." data-bn="Glaucoma Specialist বা Ophthalmologist।">Glaucoma Specialist or Ophthalmologist.</p></article>
+          <article class="specialist-card reveal"><div class="icon-circle">Rt</div><h3 data-en="Retina" data-bn="রেটিনা">Retina</h3><p data-en="Retina Specialist / Ophthalmologist." data-bn="Retina Specialist / Ophthalmologist।">Retina Specialist / Ophthalmologist.</p></article>
+          <article class="specialist-card reveal"><div class="icon-circle">Co</div><h3 data-en="Cornea" data-bn="কর্নিয়া">Cornea</h3><p data-en="Cornea Specialist / Ophthalmologist." data-bn="Cornea Specialist / Ophthalmologist।">Cornea Specialist / Ophthalmologist.</p></article>
+          <article class="specialist-card reveal"><div class="icon-circle">P</div><h3 data-en="Children / squint" data-bn="শিশু / চোখ বাঁকা">Children / squint</h3><p data-en="Pediatric Ophthalmologist or Strabismus specialist for squint, amblyopia or visual-development concerns." data-bn="Squint, amblyopia বা visual-development সমস্যায় Pediatric Ophthalmologist বা Strabismus specialist।">Pediatric Ophthalmologist or Strabismus specialist for squint, amblyopia or visual-development concerns.</p></article>
+          <article class="specialist-card reveal"><div class="icon-circle">O</div><h3 data-en="Eyelid / orbit" data-bn="চোখের পাতা / অরবিট">Eyelid / orbit</h3><p data-en="Oculoplasty Specialist / Ophthalmologist for eyelid, lacrimal-system and orbital problems." data-bn="চোখের পাতা, lacrimal system ও orbit-এর সমস্যায় Oculoplasty Specialist / Ophthalmologist।">Oculoplasty Specialist / Ophthalmologist for eyelid, lacrimal-system and orbital problems.</p></article>
+          <article class="specialist-card urgent reveal"><div class="icon-circle">!</div><h3 data-en="Trauma / emergency" data-bn="আঘাত / জরুরি অবস্থা">Trauma / emergency</h3><p data-en="Urgent Ophthalmologist or Eye Emergency service for severe trauma, sudden vision loss or chemical injury." data-bn="গুরুতর আঘাত, হঠাৎ দৃষ্টিশক্তি কমে যাওয়া বা chemical injury হলে দ্রুত Ophthalmologist বা Eye Emergency service।">Urgent Ophthalmologist or Eye Emergency service for severe trauma, sudden vision loss or chemical injury.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad soft-bg" id="care-bd">
+      <div class="container care-grid">
+        <div class="reveal">
+          <div class="eyebrow" data-en="EYE CARE IN BANGLADESH" data-bn="বাংলাদেশে চক্ষুচিকিৎসা ও সেবা">EYE CARE IN BANGLADESH</div>
+          <h2 data-en="Know what to consider before choosing eye care." data-bn="চক্ষুসেবা নেওয়ার আগে কিছু গুরুত্বপূর্ণ বিষয় বিবেচনা করুন।">Know what to consider before choosing eye care.</h2>
+          <p data-en="Bangladesh offers eye-care services through government hospitals, medical college hospitals, private hospitals and specialized eye-care institutions. Available services vary by facility and location." data-bn="বাংলাদেশে সরকারি হাসপাতাল, মেডিকেল কলেজ হাসপাতাল, বেসরকারি হাসপাতাল ও বিশেষায়িত eye-care প্রতিষ্ঠানে চক্ষুসেবা পাওয়া যায়। সেবার ধরন প্রতিষ্ঠান ও অবস্থান অনুযায়ী ভিন্ন হতে পারে।">Bangladesh offers eye-care services through government hospitals, medical college hospitals, private hospitals and specialized eye-care institutions. Available services vary by facility and location.</p>
+          <ul class="check-list">
+            <li data-en="Check clinician qualifications and the institution’s reputation." data-bn="চিকিৎসকের যোগ্যতা ও প্রতিষ্ঠানের পরিচিতি যাচাই করুন।">Check clinician qualifications and the institution’s reputation.</li>
+            <li data-en="Consider diagnostic facilities and specialist availability." data-bn="প্রয়োজনীয় diagnostic facility ও specialist availability বিবেচনা করুন।">Consider diagnostic facilities and specialist availability.</li>
+            <li data-en="Ask about follow-up arrangements when ongoing monitoring is needed." data-bn="নিয়মিত monitoring প্রয়োজন হলে follow-up ব্যবস্থা সম্পর্কে জানুন।">Ask about follow-up arrangements when ongoing monitoring is needed.</li>
+            <li data-en="Do not start treatment only from online information without appropriate examination." data-bn="অনলাইনের তথ্য দেখে নিজে থেকে ওষুধ শুরু না করে প্রয়োজন অনুযায়ী সরাসরি পরীক্ষা করান।">Do not start treatment only from online information without appropriate examination.</li>
+          </ul>
+        </div>
+        <div class="care-panel reveal">
+          <img src="/Images/Image03.png" alt="Clinical eye diagnostic equipment illustration" />
+          <div class="care-panel-copy">
+            <span data-en="Practical guidance" data-bn="ব্যবহারিক নির্দেশনা">Practical guidance</span>
+            <h3 data-en="Not every complex eye condition requires treatment abroad." data-bn="প্রতিটি জটিল চোখের সমস্যার জন্য বিদেশে চিকিৎসা প্রয়োজন হয় না।">Not every complex eye condition requires treatment abroad.</h3>
+            <p data-en="Many common and complex eye conditions can be diagnosed, treated and surgically managed in Bangladesh. Overseas referral depends on the condition and the treating specialist’s advice." data-bn="বাংলাদেশেই অনেক সাধারণ ও জটিল চক্ষুরোগের diagnosis, treatment ও surgery করা হয়। বিদেশে referral প্রয়োজন কি না তা রোগের অবস্থা ও treating specialist-এর পরামর্শের ওপর নির্ভর করে।">Many common and complex eye conditions can be diagnosed, treated and surgically managed in Bangladesh. Overseas referral depends on the condition and the treating specialist’s advice.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="profile-section" id="education">
+      <div class="container profile-shell">
+        <div class="profile-intro reveal">
+          <div>
+            <div class="eyebrow" data-en="EDUCATION & PRACTICE" data-bn="শিক্ষা ও পেশাগত পরিচিতি">EDUCATION & PRACTICE</div>
+            <h2 data-en="Clinical optometry with a growing public-health perspective." data-bn="ক্লিনিক্যাল অপটোমেট্রির সঙ্গে জনস্বাস্থ্যের বিস্তৃত দৃষ্টিভঙ্গি।">Clinical optometry with a growing public-health perspective.</h2>
+            <p data-en="A professional background focused on optometry, ocular health, patient care, preventive eye care and community health awareness." data-bn="অপটোমেট্রি, চোখের স্বাস্থ্য, রোগীসেবা, প্রতিরোধমূলক চক্ষুসেবা এবং কমিউনিটি হেলথ সচেতনতার ওপর কেন্দ্রীভূত একটি পেশাগত পরিচিতি।">A professional background focused on optometry, ocular health, patient care, preventive eye care and community health awareness.</p>
+          </div>
+          <div class="profile-credentials" aria-label="Qualifications">
+            <span class="credential-pill" data-en="Optometrist" data-bn="অপটোমেট্রিস্ট">Optometrist</span>
+            <span class="credential-pill" data-en="BPH — Pursuing" data-bn="BPH — অধ্যয়নরত">BPH — Pursuing</span>
+            <span class="credential-pill">DOT (IIEIH)</span>
+          </div>
+        </div>
+
+        <div class="profile-detail reveal">
+          <article class="profile-detail-card">
+            <span data-en="Professional background" data-bn="পেশাগত পটভূমি">Professional background</span>
+            <h3 data-en="Diploma in Ophthalmic Technique (DOT)" data-bn="Diploma in Ophthalmic Technique (DOT)">Diploma in Ophthalmic Technique (DOT)</h3>
+            <p data-en="I completed my Diploma in Ophthalmic Technique (DOT) from Ispahani Islamia Eye Institute & Hospital and have a strong interest in optometry, ocular health and patient care." data-bn="আমি Ispahani Islamia Eye Institute & Hospital থেকে Diploma in Ophthalmic Technique (DOT) সম্পন্ন করেছি এবং optometry, ocular health ও patient care বিষয়ে আমার বিশেষ আগ্রহ রয়েছে।">I completed my Diploma in Ophthalmic Technique (DOT) from Ispahani Islamia Eye Institute & Hospital and have a strong interest in optometry, ocular health and patient care.</p>
+          </article>
+
+          <article class="profile-detail-card">
+            <span data-en="Current study" data-bn="বর্তমান শিক্ষা">Current study</span>
+            <h3 data-en="Bachelor of Public Health (BPH)" data-bn="Bachelor of Public Health (BPH)">Bachelor of Public Health (BPH)</h3>
+            <p data-en="I am currently pursuing a Bachelor of Public Health, with an interest in public-health awareness, preventive eye care and community health." data-bn="আমি বর্তমানে Bachelor of Public Health (BPH) অধ্যয়ন করছি। Public-health awareness, preventive eye care এবং community health বিষয়ে আমার বিশেষ আগ্রহ রয়েছে।">I am currently pursuing a Bachelor of Public Health, with an interest in public-health awareness, preventive eye care and community health.</p>
+          </article>
+
+          <article class="profile-detail-card">
+            <span data-en="Current practice" data-bn="বর্তমান কর্মস্থল">Current practice</span>
+            <h3 data-en="Ispahani Islamia Eye Institute & Hospital" data-bn="ইস্পাহানী ইসলামিয়া চক্ষু ইনস্টিটিউট ও হাসপাতাল">Ispahani Islamia Eye Institute & Hospital</h3>
+            <p data-en="Currently practicing as an Optometrist at Ispahani Islamia Eye Institute & Hospital, one of the oldest, largest, and most renowned multispecialty eye-care hospitals in Bangladesh, with a long-standing reputation for ophthalmic treatment, education, and training." data-bn="বর্তমানে Ispahani Islamia Eye Institute & Hospital-এ Optometrist হিসেবে কর্মরত। এটি বাংলাদেশের দীর্ঘদিনের প্রতিষ্ঠিত multispecialty eye-care hospitalগুলোর একটি, যা ophthalmic treatment, education এবং training-এর জন্য সুপরিচিত।">Currently practicing as an Optometrist at Ispahani Islamia Eye Institute & Hospital, one of the oldest, largest, and most renowned multispecialty eye-care hospitals in Bangladesh, with a long-standing reputation for ophthalmic treatment, education, and training.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="contact-shell reveal">
+          <div class="contact-head">
+            <div>
+              <div class="eyebrow" data-en="CONTACT" data-bn="যোগাযোগ">CONTACT</div>
+              <h2 data-en="Connect across professional and social platforms." data-bn="পেশাগত ও সামাজিক প্ল্যাটফর্মে সংযুক্ত থাকুন।">Connect across professional and social platforms.</h2>
+            </div>
+            <p data-en="Use the profiles below to follow professional updates, educational content and eye-health awareness posts." data-bn="পেশাগত আপডেট, শিক্ষামূলক কনটেন্ট এবং চোখের স্বাস্থ্যবিষয়ক সচেতনতামূলক পোস্টের জন্য নিচের প্রোফাইলগুলো অনুসরণ করুন।">Use the profiles below to follow professional updates, educational content and eye-health awareness posts.</p>
+          </div>
+
+          <div class="social-grid">
+            <!-- Replace each placeholder URL below with Akram Hossain Bayzid's actual profile URL. -->
+            <a class="social-link" href="https://www.linkedin.com/in/akram-hossain-bayzid" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+              <span class="social-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.4 3.5A2.4 2.4 0 1 1 .6 3.5a2.4 2.4 0 0 1 4.8 0ZM1 8h4.8v15H1V8Zm7.7 0h4.6v2.1h.1c.6-1.2 2.2-2.6 4.5-2.6 4.8 0 5.7 3.2 5.7 7.3V23h-4.8v-7.3c0-1.7 0-4-2.4-4-2.4 0-2.8 1.9-2.8 3.8V23H8.7V8Z"/></svg></span>
+              <span><strong>LinkedIn</strong><small data-en="Professional profile" data-bn="পেশাগত প্রোফাইল">Professional profile</small></span>
+            </a>
+
+            <a class="social-link" href="https://x.com/ah_bayzid" target="_blank" rel="noopener noreferrer" aria-label="X profile">
+              <span class="social-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.2 2H22l-8.3 9.5L23.5 22h-7.7l-6-7.8L3 22H-.8L8 12  -1.4 2h7.9l5.4 7.1L18.2 2Zm-1.4 18.2h2.1L5.3 3.7H3.1l13.7 16.5Z"/></svg></span>
+              <span><strong>X</strong><small data-en="Updates & insights" data-bn="আপডেট ও মতামত">Updates & insights</small></span>
+            </a>
+
+            <a class="social-link" href="https://www.facebook.com/akramhossainbayzid01" target="_blank" rel="noopener noreferrer" aria-label="Facebook profile">
+              <span class="social-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4.2c-.5-.1-2.2-.2-4.2-.2-4.1 0-6.8 2.5-6.8 7v4H2v4.7h4V31h5V19.7h4.1l.7-4.7H11v-3.5C11 10.1 11.4 8 14 8Z" transform="scale(.75) translate(4 -3)"/></svg></span>
+              <span><strong>Facebook</strong><small data-en="Community updates" data-bn="কমিউনিটি আপডেট">Community updates</small></span>
+            </a>
+
+            <a class="social-link" href="https://medium.com/@bayzid14556" target="_blank" rel="noopener noreferrer" aria-label="Medium profile">
+              <span class="social-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 5.5h5.1l5 11.1 4.5-11.1H22v1.1l-1.6 1.2c-.2.2-.3.4-.3.7v10.2c0 .3.1.5.3.7l1.6 1.2v1.1h-8v-1.1l1.7-1.3c.2-.2.2-.2.2-.7V10.4L11 21.7H9.5L4 10.4v7c-.1.6.1 1.2.5 1.6l2.2 1.6v1.1H.5v-1.1L2.7 19c.4-.4.6-1 .5-1.6V8.8c0-.5-.2-.9-.6-1.2L2 6.6V5.5Z"/></svg></span>
+              <span><strong>Medium</strong><small data-en="Articles & writing" data-bn="আর্টিকেল ও লেখা">Articles & writing</small></span>
+            </a>
+
+            <a class="social-link" href="https://www.threads.com/@akramhossainbayzid" target="_blank" rel="noopener noreferrer" aria-label="Threads profile">
+              <span class="social-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.3 2C7 2 3.6 5.7 3.6 11.6c0 5.7 3.2 9.7 8.7 9.7 4.8 0 8.1-2.9 8.1-7.1 0-3.8-2.2-6.2-6.1-6.7-.4-1.1-1.3-1.8-2.7-1.8-2 0-3.2 1.3-3.2 2.8 0 1.7 1.3 2.7 3.2 2.7 1.5 0 2.6-.6 3-1.7 2.2.4 3.3 1.8 3.3 4.2 0 3.1-2.2 5.2-5.5 5.2-3.9 0-6.3-2.8-6.3-7.3 0-4.8 2.5-7.4 6.3-7.4 2.6 0 4.5 1.2 5.7 3.5l2.1-1.2C18.5 3.5 15.9 2 12.3 2Zm-.7 7.2c-.6 0-1-.3-1-.8 0-.5.4-.8 1-.8.7 0 1.1.3 1.1.8 0 .5-.4.8-1.1.8Z"/></svg></span>
+              <span><strong>Threads</strong><small data-en="Short-form updates" data-bn="সংক্ষিপ্ত আপডেট">Short-form updates</small></span>
+            </a>
+
+            <a class="social-link" href="https://youtube.com/@ah_bayzid" target="_blank" rel="noopener noreferrer" aria-label="YouTube channel">
+              <span class="social-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31.6 31.6 0 0 0 24 12a31.6 31.6 0 0 0-.5-5.8ZM9.6 15.6V8.4L15.8 12l-6.2 3.6Z"/></svg></span>
+              <span><strong>YouTube</strong><small data-en="Video education" data-bn="ভিডিও শিক্ষা">Video education</small></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section-pad final-note">
+      <div class="container final-note-inner reveal">
+        <div>
+          <div class="eyebrow" data-en="FINAL NOTE" data-bn="শেষ কথা">FINAL NOTE</div>
+          <h2 data-en="The right test, at the right time, matters." data-bn="সঠিক সময়ে সঠিক পরীক্ষা গুরুত্বপূর্ণ।">The right test, at the right time, matters.</h2>
+        </div>
+        <p data-en="Eye problems should not all be treated the same way. From refractive error to glaucoma, cataract, retina or corneal disease, each condition may require different tests and different treatment. For serious or sudden symptoms, do not rely only on online information—seek qualified eye care." data-bn="চোখের সব সমস্যাকে একইভাবে দেখা উচিত নয়। চশমার পাওয়ার থেকে শুরু করে Glaucoma, Cataract, Retina বা Cornea-এর রোগ—প্রতিটি সমস্যার জন্য প্রয়োজনীয় পরীক্ষা ও চিকিৎসা আলাদা হতে পারে। গুরুতর বা আকস্মিক উপসর্গ হলে শুধু অনলাইনের তথ্যের ওপর নির্ভর না করে যোগ্য চক্ষুসেবাদাতার পরামর্শ নিন।">Eye problems should not all be treated the same way. From refractive error to glaucoma, cataract, retina or corneal disease, each condition may require different tests and different treatment. For serious or sudden symptoms, do not rely only on online information—seek qualified eye care.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <a class="brand footer-brand" href="#home">
+          <span class="brand-mark">AB</span>
+          <span class="brand-copy"><strong>Akram Hossain Bayzid</strong><small data-en="Optometrist" data-bn="অপটোমেট্রিস্ট">Optometrist</small></span>
+        </a>
+        <p data-en="Professional optometry, patient education and eye-health guidance." data-bn="পেশাদার অপটোমেট্রি, রোগী শিক্ষা ও চোখের স্বাস্থ্যবিষয়ক নির্দেশনা।">Professional optometry, patient education and eye-health guidance.</p>
+      </div>
+      <div><strong data-en="Workplace" data-bn="কর্মস্থল">Workplace</strong><p>Ispahani Islamia Eye Institute & Hospital<br>Farmgate, Dhaka-1215</p></div>
+      <div><strong data-en="Quick links" data-bn="দ্রুত লিংক">Quick links</strong><a href="#eye-health" data-en="Eye Health" data-bn="চোখ নিয়ে জানুন">Eye Health</a><a href="#faq" data-en="Questions" data-bn="জিজ্ঞাসা">Questions</a><a href="#emergency" data-en="Emergency Guidance" data-bn="জরুরি নির্দেশনা">Emergency Guidance</a></div>
+    </div>
+    <div class="container footer-bottom"><span>© <span id="year"></span> Akram Hossain Bayzid.</span><span data-en="Educational information only — not a substitute for clinical examination." data-bn="শুধু শিক্ষামূলক তথ্য — ক্লিনিক্যাল পরীক্ষার বিকল্প নয়।">Educational information only — not a substitute for clinical examination.</span></div>
+  </footer>
+
+  
+
+<script>
+const faqData = [
+  {cat:'power',enQ:'What does “eye power” mean?',bnQ:'চোখের পাওয়ার বলতে কী বোঝায়?',enA:'When light does not focus properly on the retina, distance or near objects may appear blurred. This refractive condition is commonly described as eye power.',bnA:'চোখে আলো সঠিকভাবে রেটিনায় ফোকাস না করলে দূর বা কাছের জিনিস ঝাপসা দেখা যেতে পারে। এই দৃষ্টিগত ত্রুটিকে সাধারণভাবে চোখের পাওয়ার বলা হয়।'},
+  {cat:'power',enQ:'What is a Refractive Error?',bnQ:'Refractive Error কী?',enA:'A refractive error occurs when the optical system of the eye does not focus light correctly on the retina. Common types include Myopia, Hypermetropia and Astigmatism.',bnA:'চোখের optical system-এর কারণে আলো রেটিনায় সঠিকভাবে focus না করলে তাকে Refractive Error বলা হয়। এর প্রধান ধরন হলো Myopia, Hypermetropia এবং Astigmatism।'},
+  {cat:'power',enQ:'What is Myopia?',bnQ:'Myopia বা মায়োপিয়া কী?',enA:'In myopia, distant objects are usually blurred while near objects may appear relatively clearer.',bnA:'মায়োপিয়ায় সাধারণত দূরের বস্তু ঝাপসা দেখা যায়, কিন্তু কাছের বস্তু তুলনামূলক পরিষ্কার দেখা যায়।'},
+  {cat:'power',enQ:'What is Hypermetropia?',bnQ:'Hypermetropia কী?',enA:'Hypermetropia may cause difficulty with near tasks, although symptoms vary depending on age and the degree of refractive error.',bnA:'Hypermetropia বা দূরদৃষ্টিতে বিশেষ করে কাছের কাজ করতে সমস্যা হতে পারে। বয়স ও পাওয়ারের ওপর নির্ভর করে উপসর্গ ভিন্ন হতে পারে।'},
+  {cat:'power',enQ:'What is Astigmatism?',bnQ:'Astigmatism কী?',enA:'Astigmatism can occur when the curvature of the cornea or another optical surface is not uniform in all directions, causing blurred or distorted vision.',bnA:'কর্নিয়া বা চোখের অন্য optical surface-এর বক্রতা সবদিকে সমান না হলে Astigmatism হতে পারে। এতে ঝাপসা বা distorted vision হতে পারে।'},
+  {cat:'power',enQ:'What is Presbyopia?',bnQ:'Presbyopia কী?',enA:'Presbyopia is the age-related reduction in the eye’s ability to focus on near objects. Difficulty reading at close range commonly becomes noticeable after around age 40.',bnA:'বয়স বাড়ার সঙ্গে চোখের কাছের বস্তুতে focus করার স্বাভাবিক ক্ষমতা কমে গেলে Presbyopia হয়। সাধারণত ৪০ বছরের পর কাছের লেখা পড়তে সমস্যা দেখা দিতে পারে।'},
+  {cat:'power',enQ:'How is eye power tested?',bnQ:'চোখের পাওয়ার কীভাবে পরীক্ষা করা হয়?',enA:'Visual acuity, objective refraction, subjective refraction and other clinically appropriate tests are used to determine refractive status.',bnA:'Visual acuity, objective refraction এবং subjective refractionসহ প্রয়োজনীয় পরীক্ষা করে refractive status নির্ণয় করা হয়।'},
+  {cat:'power',enQ:'Is auto-refraction the final prescription?',bnQ:'Auto-refraction কি চূড়ান্ত পাওয়ার?',enA:'Not always. Auto-refraction is a useful supporting test, but subjective refraction and clinical assessment are often needed to finalize an accurate prescription.',bnA:'সবসময় নয়। Auto-refraction একটি গুরুত্বপূর্ণ সহায়ক পরীক্ষা। অনেক ক্ষেত্রে সঠিক prescription নির্ধারণের জন্য subjective refraction ও clinical assessment প্রয়োজন হয়।'},
+  {cat:'power',enQ:'What is Subjective Refraction?',bnQ:'Subjective Refraction কী?',enA:'It is the process of testing different lenses to determine which lens combination gives the patient the clearest and most comfortable vision.',bnA:'রোগী কোন lens-এর মাধ্যমে সবচেয়ে পরিষ্কার ও আরামদায়কভাবে দেখতে পারেন, তা বিভিন্ন lens ব্যবহার করে নির্ধারণ করার প্রক্রিয়াকে Subjective Refraction বলা হয়।'},
+  {cat:'power',enQ:'Is a glasses prescription only one number?',bnQ:'চশমার পাওয়ার কি শুধু একটি সংখ্যা?',enA:'No. A prescription may contain Sphere, Cylinder, Axis and other information depending on the patient’s needs.',bnA:'না। একটি prescription-এ Sphere, Cylinder, Axis এবং প্রয়োজন অনুযায়ী অন্যান্য তথ্য থাকতে পারে।'},
+  {cat:'power',enQ:'What do plus and minus powers mean?',bnQ:'মাইনাস বা প্লাস পাওয়ার কী?',enA:'Minus power is commonly used to correct Myopia. Plus power may be used for Hypermetropia or Presbyopia. The exact prescription depends on examination findings.',bnA:'সাধারণত Myopia correction-এর জন্য minus বা negative spherical power ব্যবহার করা হয়। Hypermetropia বা Presbyopia correction-এর ক্ষেত্রে plus power প্রয়োজন হতে পারে।'},
+  {cat:'power',enQ:'What is Cylinder power?',bnQ:'Cylinder power কী?',enA:'Cylinder power is commonly used to correct Astigmatism.',bnA:'Astigmatism correction-এর জন্য সাধারণত Cylinder power ব্যবহার করা হয়।'},
+  {cat:'power',enQ:'What does Axis mean in a prescription?',bnQ:'Axis কী?',enA:'Axis indicates the orientation at which the cylinder correction for astigmatism is placed.',bnA:'Astigmatism correction-এর cylinder lens কোন orientation-এ থাকবে, তা Axis দ্বারা নির্দেশ করা হয়।'},
+  {cat:'power',enQ:'Do both eyes need to have the same power?',bnQ:'দুই চোখের পাওয়ার কি একই হতে হয়?',enA:'No. It is common for the refractive error to differ between the two eyes.',bnA:'না। দুই চোখের refractive error আলাদা হওয়া খুবই স্বাভাবিক।'},
+  {cat:'power',enQ:'What if one eye has much more power than the other?',bnQ:'এক চোখের পাওয়ার বেশি আর অন্য চোখে কম হলে কী হয়?',enA:'A significant difference in refractive power between the eyes is called Anisometropia. It can cause discomfort or binocular-vision problems in some people.',bnA:'দুই চোখের refractive power-এর পার্থক্য বেশি হলে তাকে Anisometropia বলা হয়। এতে কিছু মানুষের binocular vision-এ সমস্যা বা অস্বস্তি হতে পারে।'},
+  {cat:'power',enQ:'Can new glasses make me feel dizzy?',bnQ:'নতুন চশমা পরলে মাথা ঘুরতে পারে?',enA:'Some people experience temporary discomfort after a new prescription, a large power change, cylinder correction or a different lens design. Persistent problems should be rechecked.',bnA:'নতুন prescription, বড় power change, cylinder power বা lens design-এর পরিবর্তনের কারণে কিছু মানুষের সাময়িক অস্বস্তি হতে পারে। সমস্যা বেশি হলে prescription পুনরায় পরীক্ষা করা উচিত।'},
+  {cat:'power',enQ:'Does wearing glasses increase eye power?',bnQ:'চশমা পরলে কি চোখের পাওয়ার বেড়ে যায়?',enA:'Correctly prescribed glasses do not generally cause the eye’s refractive error to increase.',bnA:'সঠিক prescription-এর চশমা পরার কারণে সাধারণত চোখের পাওয়ার বেড়ে যায় না।'},
+  {cat:'power',enQ:'Will not wearing glasses reduce my power?',bnQ:'চশমা না পরলে কি পাওয়ার কমে?',enA:'In general, refractive error does not decrease simply because glasses are not worn.',bnA:'সাধারণত refractive error শুধু চশমা না পরার কারণে কমে যায় না।'},
+  {cat:'children',enQ:'Can small children have eye power?',bnQ:'ছোট শিশুদের চোখের পাওয়ার হতে পারে?',enA:'Yes. Children can have Myopia, Hypermetropia and Astigmatism.',bnA:'হ্যাঁ। শিশুদেরও Myopia, Hypermetropia ও Astigmatism হতে পারে।'},
+  {cat:'children',enQ:'Can a child’s power change quickly?',bnQ:'শিশুর চোখের পাওয়ার দ্রুত বাড়তে পারে?',enA:'Refractive error can change as a child’s eyes grow and for other reasons. Regular eye examination is important.',bnA:'শিশুদের চোখের বৃদ্ধি ও অন্যান্য কারণে refractive error সময়ের সঙ্গে পরিবর্তিত হতে পারে। নিয়মিত eye examination গুরুত্বপূর্ণ।'},
+  {cat:'children',enQ:'Why is wearing prescribed glasses important for children?',bnQ:'শিশুর চশমা পরা কেন গুরুত্বপূর্ণ?',enA:'Uncorrected refractive error can affect visual development in children. Appropriate correction should therefore be used as advised by an eye-care professional.',bnA:'প্রয়োজন থাকা সত্ত্বেও refractive error correction না করলে শিশুর visual development প্রভাবিত হতে পারে। তাই চিকিৎসকের পরামর্শ অনুযায়ী correction গুরুত্বপূর্ণ।'},
+  {cat:'screen',enQ:'Does mobile use cause eye power?',bnQ:'মোবাইল ব্যবহার করলে কি চোখের পাওয়ার হয়?',enA:'Long screen use can contribute to eye strain and dryness, but mobile use is not the sole cause of all refractive errors.',bnA:'দীর্ঘসময় screen ব্যবহারে eye strain ও dryness হতে পারে। তবে সব refractive error-এর একমাত্র কারণ মোবাইল ব্যবহার নয়।'},
+  {cat:'screen',enQ:'Does reading in low light cause eye power?',bnQ:'কম আলোতে পড়লে কি চোখের পাওয়ার হয়?',enA:'Low light can cause strain or discomfort, but it is not considered the sole direct cause of refractive error.',bnA:'কম আলোতে পড়লে চোখে strain বা অস্বস্তি হতে পারে, তবে এটিকে সরাসরি refractive error হওয়ার একমাত্র কারণ বলা যায় না।'},
+  {cat:'screen',enQ:'Is using a phone in the dark harmful?',bnQ:'অন্ধকারে মোবাইল ব্যবহার করা কি ক্ষতিকর?',enA:'Long screen use in darkness may increase eye strain and discomfort. Adequate ambient light and regular breaks are better habits.',bnA:'অন্ধকারে দীর্ঘসময় screen দেখলে চোখের strain ও অস্বস্তি বাড়তে পারে। পর্যাপ্ত ambient light ও নিয়মিত বিরতি নেওয়া ভালো অভ্যাস।'},
+  {cat:'screen',enQ:'What can happen after long computer use?',bnQ:'দীর্ঘসময় কম্পিউটার ব্যবহার করলে চোখে কী হতে পারে?',enA:'Dryness, burning, blurred vision, headache or eye strain can occur. Regular breaks and screen ergonomics may help.',bnA:'চোখ শুষ্ক লাগা, জ্বালা, ঝাপসা দেখা, মাথাব্যথা বা eye strain হতে পারে। নিয়মিত বিরতি ও screen ergonomics উপকারী।'},
+  {cat:'screen',enQ:'What is the 20-20-20 Rule?',bnQ:'20-20-20 Rule কী?',enA:'Every 20 minutes of near screen use, look at something about 20 feet away for at least 20 seconds.',bnA:'দীর্ঘসময় কাছের screen দেখার সময় প্রতি ২০ মিনিট পর প্রায় ২০ ফুট দূরের কোনো বস্তুর দিকে অন্তত ২০ সেকেন্ড তাকানোর অভ্যাসকে 20-20-20 Rule বলা হয়।'},
+  {cat:'lens',enQ:'Can eye exercises permanently reduce refractive power?',bnQ:'চোখের পাওয়ার কমানোর কোনো ব্যায়াম আছে?',enA:'Some exercises may help specific visual discomfort, but they are not proven to permanently reduce common Myopia or other refractive errors.',bnA:'কিছু eye exercise নির্দিষ্ট visual discomfort-এ উপকারী হতে পারে, কিন্তু সাধারণ Myopia বা অন্য refractive error স্থায়ীভাবে কমানোর প্রমাণিত উপায় হিসেবে এগুলোকে ধরা হয় না।'},
+  {cat:'lens',enQ:'Can eye power improve by itself?',bnQ:'চোখের পাওয়ার কি নিজে নিজে ভালো হয়ে যায়?',enA:'Some age-related or temporary changes can behave differently, but a persistent refractive error should be examined and corrected when needed.',bnA:'কিছু বয়স-সম্পর্কিত বা সাময়িক পরিবর্তন ভিন্নভাবে আচরণ করতে পারে, তবে সাধারণ refractive error থাকলে পরীক্ষা করে প্রয়োজনীয় correction নেওয়া উচিত।'},
+  {cat:'lens',enQ:'Are there ways to see clearly without glasses?',bnQ:'চশমা ছাড়া পরিষ্কার দেখার কোনো উপায় আছে?',enA:'Depending on the eye and prescription, options may include contact lenses or refractive surgery. Suitability depends on eye examination.',bnA:'চশমা ছাড়াও কিছু ক্ষেত্রে contact lens বা refractive surgery-এর মতো option থাকতে পারে। কোনটি উপযুক্ত তা eye examination-এর ওপর নির্ভর করে।'},
+  {cat:'lens',enQ:'Are contact lenses suitable for everyone?',bnQ:'Contact Lens কি সবার জন্য উপযুক্ত?',enA:'No. Proper eye examination, lens selection and hygiene are important before and during contact lens use.',bnA:'না। Contact lens ব্যবহারের আগে চোখ পরীক্ষা, উপযুক্ত lens selection এবং proper hygiene প্রয়োজন।'},
+  {cat:'lens',enQ:'Can I sleep in contact lenses?',bnQ:'Contact Lens পরে ঘুমানো যায়?',enA:'Unless specifically advised for a suitable lens type, sleeping in regular contact lenses is generally not recommended.',bnA:'চিকিৎসকের নির্দিষ্ট নির্দেশনা ছাড়া সাধারণ contact lens পরে ঘুমানো উচিত নয়।'},
+  {cat:'lens',enQ:'How often should spectacle lenses be changed?',bnQ:'চশমার lens কতদিন পর পরিবর্তন করতে হয়?',enA:'There is no single interval for everyone. Replacement depends on prescription change, lens damage and visual needs.',bnA:'নির্দিষ্ট সময় সবার জন্য এক নয়। পাওয়ার পরিবর্তন, lens damage এবং visual need অনুযায়ী নতুন lens প্রয়োজন হতে পারে।'},
+  {cat:'lens',enQ:'Can I make new glasses from an old prescription?',bnQ:'পুরোনো prescription দিয়ে নতুন চশমা বানানো যাবে?',enA:'If it is not known whether the power has changed, a fresh eye examination is preferable before making new glasses.',bnA:'পাওয়ার পরিবর্তিত হয়েছে কি না জানা না থাকলে নতুন করে eye examination করানো ভালো।'},
+  {cat:'lens',enQ:'What if vision is still blurred with glasses?',bnQ:'চশমা পরেও ঝাপসা দেখলে কী করব?',enA:'The prescription, lens fitting, ocular surface and other possible eye problems may need to be assessed.',bnA:'চশমার power, lens fitting, ocular surface এবং অন্যান্য চোখের সমস্যা পরীক্ষা করা প্রয়োজন হতে পারে।'},
+  {cat:'lens',enQ:'Can glasses cause headache?',bnQ:'চশমা পরেও মাথাব্যথা হলে কী কারণ হতে পারে?',enA:'Possible causes include an inaccurate prescription, uncorrected refractive error, inappropriate IPD measurement, binocular-vision problems, prolonged screen use or other factors.',bnA:'ভুল prescription, uncorrected refractive error, inappropriate IPD measurement, binocular vision সমস্যা, prolonged screen use বা অন্য কারণ থাকতে পারে।'},
+  {cat:'lens',enQ:'Does high minus power make the eyes look smaller?',bnQ:'চশমার পাওয়ার বেশি হলে কি চোখ ছোট দেখায়?',enA:'High minus lenses can make the eyes appear somewhat smaller. Lens design and index selection may reduce this cosmetic effect.',bnA:'বিশেষ ধরনের high minus lens-এ চোখ কিছুটা ছোট দেখাতে পারে। Lens design ও index নির্বাচন করে এই cosmetic effect কিছুটা কমানো যায়।'},
+  {cat:'lens',enQ:'Does a blue-cut lens reduce eye power?',bnQ:'Blue-cut lens কি চোখের পাওয়ার কমায়?',enA:'No. Blue-light filtering lenses do not reduce refractive error. Some people may notice a difference in screen-related comfort.',bnA:'Blue-light filtering lens refractive error কমায় না। কিছু মানুষের screen-related comfort-এ পার্থক্য অনুভূত হতে পারে।'},
+  {cat:'lens',enQ:'What is a photochromic lens?',bnQ:'Photochromic lens কী?',enA:'A photochromic lens darkens automatically in brighter light and becomes relatively clear indoors.',bnA:'আলোতে গেলে স্বয়ংক্রিয়ভাবে গাঢ় হয়ে যায় এবং indoor-এ তুলনামূলক স্বচ্ছ থাকে—এ ধরনের lens-কে Photochromic lens বলা হয়।'},
+  {cat:'lens',enQ:'What is anti-reflective coating?',bnQ:'Anti-reflective coating কী?',enA:'It is a coating that reduces reflections from the lens surface and can help reduce glare and improve optical appearance.',bnA:'Lens-এর surface reflection কমাতে ব্যবহৃত coating। এটি glare কমাতে এবং lens-এর optical appearance উন্নত করতে সাহায্য করতে পারে।'},
+  {cat:'lens',enQ:'Who may need single-vision (unifocal) glasses?',bnQ:'ইউনিফোকাল গ্লাস কাদের জন্য?',enA:'They are commonly used when correction is required mainly for one distance, such as distance-only or near-only vision.',bnA:'যাদের একটি নির্দিষ্ট দূরত্বের জন্য চশমা প্রয়োজন—যেমন শুধু দূরের জন্য বা শুধু কাছের জন্য—তাদের জন্য ইউনিফোকাল গ্লাস।'},
+  {cat:'lens',enQ:'Who may need bifocal glasses?',bnQ:'বাইফোকাল গ্লাস কাদের জন্য?',enA:'Bifocals are commonly used when both distance and near correction are required, particularly in presbyopia.',bnA:'সাধারণত যাদের দূর ও কাছে—দুই ধরনের দৃষ্টির correction প্রয়োজন, তাদের জন্য বাইফোকাল ব্যবহার করা হয়। বিশেষ করে Presbyopia-তে এটি প্রচলিত।'},
+  {cat:'lens',enQ:'What is the difference between bifocal and progressive lenses?',bnQ:'বাইফোকাল ও প্রোগ্রেসিভের প্রধান পার্থক্য কী?',enA:'Bifocals have a visible dividing line between distance and near zones. Progressives change power gradually and do not have a visible line.',bnA:'বাইফোকালে দূর ও কাছের পাওয়ারের মধ্যে স্পষ্ট লাইন থাকে। প্রোগ্রেসিভে পাওয়ার ধীরে ধীরে পরিবর্তিত হয় এবং দৃশ্যমান কোনো লাইন থাকে না।'},
+  {cat:'lens',enQ:'Who may benefit from progressive glasses?',bnQ:'প্রোগ্রেসিভ গ্লাস কাদের জন্য?',enA:'They can help people who need clear vision at distance, intermediate and near ranges, especially with presbyopia.',bnA:'যাদের দূর, মধ্যবর্তী ও কাছে—একাধিক দূরত্বে পরিষ্কার দেখার প্রয়োজন, বিশেষ করে Presbyopia থাকলে, তাদের জন্য progressive lens উপকারী হতে পারে।'},
+  {cat:'disease',enQ:'What should I do if my eye becomes red?',bnQ:'চোখ লাল হলে কী করব?',enA:'Redness has many possible causes. Avoid rubbing the eye and obtain an eye examination when appropriate to determine the cause.',bnA:'চোখ লাল হওয়ার কারণ অনেক হতে পারে। চোখ না ঘষে কারণ নির্ণয়ের জন্য প্রয়োজন অনুযায়ী eye examination করানো উচিত।'},
+  {cat:'disease',enQ:'What should I do if my eye itches?',bnQ:'চোখ চুলকালে কী করা উচিত?',enA:'Allergy, dry eye and other conditions can cause itching. Avoid rubbing the eye and seek professional advice if the problem continues.',bnA:'অ্যালার্জি, dry eye বা অন্য কারণে চুলকানি হতে পারে। চোখ ঘষা এড়িয়ে চলুন এবং সমস্যা থাকলে চিকিৎসকের পরামর্শ নিন।'},
+  {cat:'disease',enQ:'Why do my eyes water excessively?',bnQ:'চোখ দিয়ে অতিরিক্ত পানি পড়ার কারণ কী?',enA:'Possible causes include dry eye, allergy, irritation and tear-drainage problems.',bnA:'Dry eye, allergy, irritation বা tear drainage-এর সমস্যাসহ বিভিন্ন কারণে পানি পড়তে পারে।'},
+  {cat:'disease',enQ:'What is Dry Eye?',bnQ:'Dry Eye কী?',enA:'Dry eye occurs when the tear film is insufficient or does not function properly, causing dryness, burning or a gritty sensation.',bnA:'চোখের tear film পর্যাপ্ত বা সঠিকভাবে কাজ না করলে চোখ শুষ্ক, জ্বালাপোড়া বা খসখসে লাগতে পারে। এটিকে Dry Eye বলা হয়।'},
+  {cat:'disease',enQ:'What is Conjunctivitis?',bnQ:'Conjunctivitis কী?',enA:'Conjunctivitis is inflammation of the conjunctiva and may cause redness, watering, itching or discharge.',bnA:'চোখের conjunctiva-তে প্রদাহ হলে Conjunctivitis হয়। চোখ লাল, পানি পড়া, চুলকানি বা discharge হতে পারে।'},
+  {cat:'disease',enQ:'Is Conjunctivitis contagious?',bnQ:'Conjunctivitis কি ছোঁয়াচে?',enA:'Some forms can be contagious. Hand hygiene and avoiding shared towels or handkerchiefs are important.',bnA:'কিছু ধরনের Conjunctivitis সংক্রামক হতে পারে। তাই হাত পরিষ্কার রাখা এবং ব্যক্তিগত তোয়ালে/রুমাল ভাগাভাগি না করা গুরুত্বপূর্ণ।'},
+  {cat:'disease',enQ:'What is Cataract?',bnQ:'Cataract বা ছানি কী?',enA:'A cataract occurs when the eye’s natural lens becomes cloudy, often causing gradually blurred vision.',bnA:'চোখের natural lens ঘোলা হয়ে গেলে Cataract বা ছানি হয়। এতে ধীরে ধীরে দৃষ্টি ঝাপসা হতে পারে।'},
+  {cat:'disease',enQ:'Can cataract be cured with medicine?',bnQ:'Cataract কি ওষুধে ভালো হয়?',enA:'Definitive cataract treatment is generally surgery. An ophthalmologist determines when surgery is appropriate based on vision and daily-life impact.',bnA:'Cataract-এর definitive treatment সাধারণত surgery। কখন surgery প্রয়োজন তা Ophthalmologist রোগীর দৃষ্টি ও দৈনন্দিন জীবনে প্রভাব বিবেচনা করে নির্ধারণ করেন।'},
+  {cat:'glaucoma',enQ:'What is Glaucoma?',bnQ:'Glaucoma কী?',enA:'Glaucoma is a group of diseases that can damage the optic nerve and may lead to permanent vision loss if untreated.',bnA:'Glaucoma হলো এমন একদল রোগ যাতে optic nerve ক্ষতিগ্রস্ত হতে পারে এবং চিকিৎসা না হলে স্থায়ী দৃষ্টিক্ষতির ঝুঁকি থাকে।'},
+  {cat:'glaucoma',enQ:'Why is Glaucoma called the “silent killer” of vision?',bnQ:'চোখের “নীরব ঘাতক” বলতে Glaucoma-কে কেন বোঝানো হয়?',enA:'Many forms of glaucoma can progress without clear early symptoms while gradually damaging the optic nerve. Once permanent optic-nerve damage occurs, lost vision is usually not restored.',bnA:'অনেক ক্ষেত্রে Glaucoma শুরুতে কোনো উল্লেখযোগ্য উপসর্গ ছাড়াই ধীরে ধীরে optic nerve-এর ক্ষতি করতে পারে। একবার optic nerve-এর স্থায়ী ক্ষতি হলে তা সাধারণত আগের অবস্থায় ফিরিয়ে আনা যায় না।'},
+  {cat:'glaucoma',enQ:'Does high eye pressure always mean Glaucoma?',bnQ:'চোখের চাপ (IOP) বেশি হলেই কি Glaucoma?',enA:'No. IOP is important, but glaucoma cannot be confirmed or excluded by one pressure reading alone.',bnA:'না। IOP গুরুত্বপূর্ণ হলেও শুধু চোখের চাপের একটি মান দিয়ে Glaucoma নিশ্চিত বা বাদ দেওয়া যায় না।'},
+  {cat:'glaucoma',enQ:'Can Glaucoma occur even with normal eye pressure?',bnQ:'চোখের চাপ স্বাভাবিক থাকলেও কি Glaucoma হতে পারে?',enA:'Yes. In conditions such as normal-tension glaucoma, optic-nerve damage can occur even when IOP is within the conventional range.',bnA:'হ্যাঁ। Normal-tension glaucoma-এর মতো অবস্থায় IOP প্রচলিত range-এর মধ্যে থাকলেও optic nerve damage হতে পারে।'},
+  {cat:'glaucoma',enQ:'Which tests may be used to assess Glaucoma?',bnQ:'Glaucoma নির্ণয়ে কী কী পরীক্ষা করা হতে পারে?',enA:'Depending on the patient, assessment may include IOP measurement, optic-nerve examination, visual field testing, gonioscopy, OCT and other tests.',bnA:'রোগীর প্রয়োজন অনুযায়ী IOP measurement, optic nerve assessment, visual field examination, gonioscopy, OCT এবং অন্যান্য পরীক্ষা করা হতে পারে।'},
+  {cat:'retina',enQ:'Why do I see floaters?',bnQ:'চোখে কালো দাগ / Floaters কেন দেখা যায়?',enA:'Floaters can occur from changes in the vitreous and other causes. A sudden increase in floaters or associated flashes needs prompt retinal evaluation.',bnA:'Vitreous-এর পরিবর্তনসহ বিভিন্ন কারণে floaters দেখা যেতে পারে। হঠাৎ অনেক floaters বা flashes দেখা দিলে দ্রুত retina examination প্রয়োজন।'},
+  {cat:'retina',enQ:'Why do I see flashes of light?',bnQ:'Flashes of light কেন দেখা যায়?',enA:'Flashes may occur from vitreous changes and other causes. New flashes with floaters or a curtain-like shadow require urgent retinal assessment.',bnA:'চোখের vitreous-এর পরিবর্তনসহ বিভিন্ন কারণে flashes হতে পারে। নতুন flashes-এর সঙ্গে floaters বা curtain-like shadow হলে জরুরি ভিত্তিতে retina examination প্রয়োজন।'},
+  {cat:'retina',enQ:'What if I see a curtain or shadow in front of my eye?',bnQ:'চোখের সামনে পর্দার মতো কিছু দেখলে কী করব?',enA:'A sudden curtain-like shadow can be a sign of retinal tear or retinal detachment and should be treated as an eye emergency.',bnA:'হঠাৎ পর্দা বা shadow দেখা retinal tear বা retinal detachment-এর মতো জরুরি সমস্যার লক্ষণ হতে পারে। দ্রুত eye emergency/retina specialist-এর কাছে যেতে হবে।'},
+  {cat:'retina',enQ:'What is Diabetic Retinopathy?',bnQ:'Diabetic Retinopathy কী?',enA:'It is retinal blood-vessel damage associated with long-term diabetes.',bnA:'দীর্ঘদিনের diabetes-এর কারণে retina-র রক্তনালিতে ক্ষতি হলে Diabetic Retinopathy হতে পারে।'},
+  {cat:'retina',enQ:'Why are regular eye exams important in diabetes?',bnQ:'ডায়াবেটিস রোগীর চোখ পরীক্ষা কেন জরুরি?',enA:'Diabetic Retinopathy can be present without noticeable early symptoms, so periodic retinal examination is important.',bnA:'Diabetic Retinopathy শুরুতে উল্লেখযোগ্য উপসর্গ ছাড়াই থাকতে পারে। তাই নিয়মিত retinal examination গুরুত্বপূর্ণ।'},
+  {cat:'emergency',enQ:'What should I do after an eye injury?',bnQ:'চোখে আঘাত লাগলে কী করব?',enA:'Do not rub or press on the eye. Seek urgent care if there is pain, vision loss, bleeding or a significant injury.',bnA:'চোখ ঘষবেন না বা চাপ দেবেন না। ব্যথা, vision loss, bleeding বা গুরুতর আঘাত থাকলে দ্রুত চিকিৎসা নিন।'},
+  {cat:'emergency',enQ:'What should I do if a chemical gets into the eye?',bnQ:'চোখে রাসায়নিক পদার্থ ঢুকলে কী করব?',enA:'Rinse immediately with plenty of clean water and seek urgent medical attention. Do not rub the eye.',bnA:'দেরি না করে প্রচুর পরিষ্কার পানি দিয়ে চোখ ধুতে হবে এবং দ্রুত চিকিৎসা নিতে হবে। চোখ ঘষা উচিত নয়।'},
+  {cat:'emergency',enQ:'What if my vision suddenly decreases?',bnQ:'চোখে হঠাৎ দৃষ্টি কমে গেলে কী করব?',enA:'Sudden vision loss is an emergency sign. Seek urgent ophthalmic or eye-emergency care.',bnA:'হঠাৎ vision loss একটি জরুরি লক্ষণ। দ্রুত চক্ষুচিকিৎসক বা eye emergency service-এ যেতে হবে।'},
+  {cat:'emergency',enQ:'When should an eye problem be considered urgent?',bnQ:'কখন চোখের সমস্যাকে জরুরি হিসেবে বিবেচনা করব?',enA:'Urgent symptoms include sudden vision loss, severe pain, significant trauma, flashes with many new floaters, a curtain-like shadow, chemical injury, or severe redness with vision change.',bnA:'হঠাৎ দৃষ্টিশক্তি কমে যাওয়া, তীব্র চোখের ব্যথা, গুরুতর আঘাত, flashes-এর সঙ্গে অনেক নতুন floaters, curtain-like shadow, chemical injury বা তীব্র লাল চোখের সঙ্গে vision change হলে দ্রুত চিকিৎসা প্রয়োজন।'},
+  {"cat": "symptoms", "enQ": "What is excessive watering from the eyes called?", "bnQ": "চোখ দিয়ে অতিরিক্ত পানি পড়াকে কী বলে?", "enA": "Excessive watering from the eyes beyond the normal amount is called Epiphora.", "bnA": "চোখ দিয়ে স্বাভাবিকের তুলনায় অতিরিক্ত পানি পড়াকে Epiphora (এপিফোরা) বলে।"},
+  {"cat": "symptoms", "enQ": "What can cause watery eyes?", "bnQ": "চোখে পানি পড়ার কারণ কী?", "enA": "Watery eyes may occur because of dry eye, allergy, dust, eye inflammation, a foreign body in the eye, or blockage of the tear drainage pathway.", "bnA": "চোখের শুষ্কতা, অ্যালার্জি, ধুলাবালি, চোখের প্রদাহ, চোখে বিদেশি বস্তু এবং অশ্রুনালীর বাধার কারণে চোখে পানি পড়তে পারে।"},
+  {"cat": "symptoms", "enQ": "Why can dry eyes also cause watering?", "bnQ": "চোখ শুষ্ক হলেও পানি পড়ে কেন?", "enA": "When the eyes become very dry, reflex tearing can produce excess tears. For this reason, Dry Eye can also cause watering.", "bnA": "চোখ বেশি শুষ্ক হলে প্রতিক্রিয়াজনিতভাবে অতিরিক্ত পানি তৈরি হতে পারে। তাই Dry Eye-তেও চোখ দিয়ে পানি পড়তে পারে।"},
+  {"cat": "symptoms", "enQ": "What is a common cause of watery eyes in children?", "bnQ": "শিশুদের চোখে পানি পড়ার সাধারণ কারণ কী?", "enA": "A congenitally narrow or blocked tear duct is a common cause of persistent watering in children.", "bnA": "জন্মগতভাবে অশ্রুনালী সরু বা বন্ধ থাকা শিশুদের চোখে পানি পড়ার একটি সাধারণ কারণ।"},
+  {"cat": "symptoms", "enQ": "When should watery eyes be examined by a doctor?", "bnQ": "চোখে পানি পড়লে কখন ডাক্তার দেখাবেন?", "enA": "Professional evaluation is advised when watering is persistent or is associated with redness, pain, pus or discharge, or vision problems.", "bnA": "দীর্ঘদিন পানি পড়া, চোখ লাল বা ব্যথা হওয়া, পুঁজ বা স্রাব হওয়া কিংবা দৃষ্টির সমস্যা থাকলে চক্ষু বিশেষজ্ঞের পরামর্শ নেওয়া উচিত।"},
+  {"cat": "symptoms", "enQ": "What can cause swollen eyelids?", "bnQ": "চোখের পাতা ফুলে যাওয়ার কারণ কী?", "enA": "Possible causes include allergy, eye infection, eyelid inflammation, a stye or lump, injury, and sometimes other conditions affecting the body.", "bnA": "অ্যালার্জি, চোখের সংক্রমণ, চোখের পাতার প্রদাহ, স্টাই বা গুটি, আঘাত এবং কখনও শরীরের অন্যান্য সমস্যার কারণে চোখের পাতা ফুলতে পারে।"},
+  {"cat": "symptoms", "enQ": "What can an eyelid lump be called?", "bnQ": "চোখের পাতায় গুটি হলে তাকে কী বলে?", "enA": "An infection of an eyelid oil gland may cause a Stye (Hordeolum). A blocked gland with inflammation may cause a Chalazion.", "bnA": "চোখের পাতার তেলগ্রন্থিতে সংক্রমণ হলে Stye (Hordeolum) হতে পারে। আবার গ্রন্থির মুখ বন্ধ হয়ে প্রদাহ হলে Chalazion হতে পারে।"},
+  {"cat": "symptoms", "enQ": "What symptoms may occur when eyelid swelling is caused by allergy?", "bnQ": "অ্যালার্জির কারণে চোখের পাতা ফুললে কী লক্ষণ থাকে?", "enA": "Common symptoms may include itching, watering, redness, and swelling of the eyelids in both eyes.", "bnA": "সাধারণত চুলকানি, পানি পড়া, চোখ লাল হওয়া এবং দুই চোখের পাতা ফুলে যাওয়ার মতো লক্ষণ থাকতে পারে।"},
+  {"cat": "symptoms", "enQ": "Should I rub my eyes if my eyelids are swollen?", "bnQ": "চোখের পাতা ফুললে চোখ ঘষা উচিত কি?", "enA": "No. Rubbing the eyes may worsen inflammation or infection.", "bnA": "না। চোখ ঘষলে প্রদাহ বা সংক্রমণ আরও বাড়তে পারে।"},
+  {"cat": "symptoms", "enQ": "When does eyelid swelling need urgent medical attention?", "bnQ": "চোখের পাতা ফুললে কখন দ্রুত চিকিৎসা প্রয়োজন?", "enA": "Seek prompt medical advice if there is severe pain, fever, reduced vision, pain with eye movement, or rapidly increasing swelling around the eye.", "bnA": "তীব্র ব্যথা, জ্বর, দৃষ্টিশক্তি কমে যাওয়া, চোখ নড়াতে ব্যথা বা চোখের চারপাশ দ্রুত ফুলে গেলে দ্রুত চিকিৎসকের পরামর্শ নেওয়া উচিত।"},
+  {"cat": "symptoms", "enQ": "What can a white or cloudy-looking pupil indicate?", "bnQ": "চোখের মণি সাদা বা ঘোলাটে দেখালে কী হতে পারে?", "enA": "It may be associated with Cataract, corneal clouding, or, particularly in children, other potentially serious eye conditions.", "bnA": "এটি ছানি (Cataract), কর্নিয়ার ঘোলাটে হওয়া বা শিশুদের ক্ষেত্রে কিছু গুরুতর চোখের রোগের লক্ষণ হতে পারে।"},
+  {"cat": "symptoms", "enQ": "What happens when someone has a cataract?", "bnQ": "ছানি হলে কী হয়?", "enA": "The eye's normally clear natural lens becomes cloudy. Vision may gradually decrease, with glare or hazy vision in some people.", "bnA": "চোখের স্বচ্ছ লেন্স ঘোলাটে হয়ে যায়। ফলে ধীরে ধীরে দৃষ্টিশক্তি কমে যেতে পারে এবং আলোতে ঝলকানি বা কুয়াশাচ্ছন্ন দেখা হতে পারে।"},
+  {"cat": "symptoms", "enQ": "Is a white pupil in a child normal?", "bnQ": "শিশুর চোখের মণি সাদা দেখালে কি স্বাভাবিক?", "enA": "No. A white reflex in a child's pupil, known as Leukocoria, requires prompt examination by an eye specialist.", "bnA": "না। শিশুর চোখে সাদা প্রতিফলন (Leukocoria) দেখা গেলে দ্রুত চক্ষু বিশেষজ্ঞের পরীক্ষা প্রয়োজন।"},
+  {"cat": "symptoms", "enQ": "Should a white pupil always be assumed to be cataract?", "bnQ": "চোখের মণি সাদা হলে শুধু ছানি ধরে নেওয়া কি ঠিক?", "enA": "No. Different conditions can produce a white or cloudy appearance. This is especially important in children, where prompt examination is essential.", "bnA": "না। বিভিন্ন রোগের কারণে এমন হতে পারে। বিশেষ করে শিশুর ক্ষেত্রে দ্রুত পরীক্ষা করা অত্যন্ত গুরুত্বপূর্ণ।"},
+  {"cat": "symptoms", "enQ": "What should I do if the pupil looks white?", "bnQ": "চোখের মণি সাদা দেখলে কী করা উচিত?", "enA": "Do not delay. A comprehensive eye examination by an eye specialist is recommended.", "bnA": "দেরি না করে চক্ষু বিশেষজ্ঞের কাছে গিয়ে পূর্ণাঙ্গ চোখ পরীক্ষা করানো উচিত।"},
+  {"cat": "nightcolor", "enQ": "What is night blindness?", "bnQ": "রাতকানা কী?", "enA": "Difficulty seeing in low light or at night is commonly called night blindness (Nyctalopia).", "bnA": "অল্প আলো বা রাতে দেখতে অসুবিধা হওয়াকে সাধারণভাবে রাতকানা (Night blindness/Nyctalopia) বলা হয়।"},
+  {"cat": "nightcolor", "enQ": "What is an important nutritional cause of night blindness?", "bnQ": "রাতকানার অন্যতম পুষ্টিগত কারণ কী?", "enA": "Vitamin A deficiency is an important nutritional cause of night blindness.", "bnA": "ভিটামিন A-এর ঘাটতি রাতকানার একটি গুরুত্বপূর্ণ কারণ।"},
+  {"cat": "nightcolor", "enQ": "Why is Vitamin A important for vision?", "bnQ": "ভিটামিন A চোখের জন্য কেন গুরুত্বপূর্ণ?", "enA": "Vitamin A is important for normal retinal function and for the formation of rhodopsin, which supports vision in low light.", "bnA": "ভিটামিন A চোখের রেটিনার স্বাভাবিক কাজ এবং বিশেষ করে কম আলোতে দেখার জন্য প্রয়োজনীয় Rhodopsin তৈরিতে গুরুত্বপূর্ণ ভূমিকা রাখে।"},
+  {"cat": "nightcolor", "enQ": "Is night blindness caused only by Vitamin A deficiency?", "bnQ": "শুধু ভিটামিন A-এর অভাবেই কি রাতকানা হয়?", "enA": "No. Retinal diseases and other conditions can also cause night blindness.", "bnA": "না। রেটিনার বিভিন্ন রোগসহ অন্যান্য কারণেও রাতকানা হতে পারে।"},
+  {"cat": "nightcolor", "enQ": "What should I do if I have night blindness?", "bnQ": "রাতকানা হলে কী করা উচিত?", "enA": "An eye examination is needed to identify the cause, followed by appropriate nutritional or medical management. High-dose Vitamin A should not be taken without professional guidance.", "bnA": "কারণ নির্ণয়ের জন্য চোখ পরীক্ষা এবং প্রয়োজন অনুযায়ী পুষ্টি ও চিকিৎসার ব্যবস্থা করা উচিত। নিজের ইচ্ছায় উচ্চমাত্রার ভিটামিন A গ্রহণ করা ঠিক নয়।"},
+  {"cat": "nightcolor", "enQ": "What is Color Vision?", "bnQ": "Color Vision কী?", "enA": "Color Vision is the ability of the eyes and brain to identify and distinguish different colors.", "bnA": "বিভিন্ন বর্ণ বা রংকে আলাদা করে শনাক্ত ও পার্থক্য করার চোখ ও মস্তিষ্কের ক্ষমতাকে Color Vision বা বর্ণদৃষ্টি বলে।"},
+  {"cat": "nightcolor", "enQ": "What is color vision deficiency?", "bnQ": "বর্ণান্ধতা কী?", "enA": "Difficulty correctly identifying or distinguishing certain colors is called Color Vision Deficiency.", "bnA": "নির্দিষ্ট কিছু রং সঠিকভাবে শনাক্ত বা পার্থক্য করতে অসুবিধা হওয়াকে Color Vision Deficiency (বর্ণদৃষ্টি ঘাটতি) বলা হয়।"},
+  {"cat": "nightcolor", "enQ": "Can color vision deficiency be present from birth?", "bnQ": "বর্ণান্ধতা কি জন্মগত হতে পারে?", "enA": "Yes. In many cases it is inherited and may be present from birth.", "bnA": "হ্যাঁ। অনেক ক্ষেত্রে এটি বংশগত এবং জন্মগতভাবে থাকতে পারে।"},
+  {"cat": "nightcolor", "enQ": "How is color vision tested?", "bnQ": "বর্ণান্ধতা কীভাবে পরীক্ষা করা হয়?", "enA": "Color vision can be assessed using tests such as the Ishihara Color Test and D-15 test.", "bnA": "Ishihara Color Test, D-15 testসহ বিভিন্ন পরীক্ষার মাধ্যমে বর্ণদৃষ্টি পরীক্ষা করা যায়।"},
+  {"cat": "nightcolor", "enQ": "Can congenital color vision deficiency be completely cured?", "bnQ": "বর্ণান্ধতা কি পুরোপুরি নিরাময় করা যায়?", "enA": "Congenital color vision deficiency generally has no permanent cure. Some special lenses or filters may help some people distinguish colors more easily.", "bnA": "জন্মগত বর্ণদৃষ্টি ঘাটতির সাধারণত স্থায়ী চিকিৎসা নেই। তবে বিশেষ কিছু লেন্স বা ফিল্টার কিছু মানুষের রং পার্থক্য করার ক্ষমতায় সহায়তা করতে পারে।"},
+  {"cat": "nutrition", "enQ": "What is Vitamin A?", "bnQ": "ভিটামিন A কী?", "enA": "Vitamin A is a fat-soluble vitamin important for vision, immune function, skin, and normal growth of different tissues.", "bnA": "ভিটামিন A একটি চর্বিতে দ্রবণীয় ভিটামিন, যা দৃষ্টিশক্তি, রোগপ্রতিরোধ ক্ষমতা, ত্বক ও বিভিন্ন টিস্যুর স্বাভাবিক বৃদ্ধির জন্য গুরুত্বপূর্ণ।"},
+  {"cat": "nutrition", "enQ": "What are important forms of Vitamin A?", "bnQ": "ভিটামিন A-এর গুরুত্বপূর্ণ রাসায়নিক রূপ কী কী?", "enA": "The main active form is Retinol. Related important forms include Retinal and Retinoic acid. For vision, 11-cis-retinal is especially important.", "bnA": "ভিটামিন A-এর প্রধান সক্রিয় রূপ হলো Retinol। এর সঙ্গে সম্পর্কিত গুরুত্বপূর্ণ রূপগুলো হলো Retinol → Retinal → Retinoic acid। চোখের দৃষ্টির ক্ষেত্রে বিশেষভাবে গুরুত্বপূর্ণ হলো 11-cis-retinal।"},
+  {"cat": "nutrition", "enQ": "How does Vitamin A work in the eye?", "bnQ": "ভিটামিন A চোখে কীভাবে কাজ করে?", "enA": "In retinal rod cells, 11-cis-retinal combines with opsin to form Rhodopsin. Light changes rhodopsin and initiates a signal that ultimately reaches the brain and supports vision.", "bnA": "চোখের রেটিনার Rod cell-এ থাকা Rhodopsin তৈরিতে 11-cis-retinal গুরুত্বপূর্ণ। 11-cis-retinal + Opsin → Rhodopsin। আলো চোখে প্রবেশ করলে Rhodopsin-এ পরিবর্তন ঘটে এবং একটি সিগন্যাল তৈরি হয়। এই সিগন্যাল পরে মস্তিষ্কে পৌঁছে আমাদের দেখতে সাহায্য করে।"},
+  {"cat": "nutrition", "enQ": "Why can Vitamin A deficiency cause night blindness?", "bnQ": "ভিটামিন A-এর ঘাটতিতে রাতকানা কেন হতে পারে?", "enA": "Because Vitamin A is important in the visual cycle and rhodopsin formation, deficiency can particularly reduce the ability to see in low light.", "bnA": "ভিটামিন A দৃষ্টির প্রক্রিয়া ও Rhodopsin তৈরিতে গুরুত্বপূর্ণ হওয়ায় এর ঘাটতি হলে বিশেষ করে কম আলোতে দেখার ক্ষমতা কমে গিয়ে রাতকানা হতে পারে।"},
+  {"cat": "therapy", "enQ": "What is Vision Therapy?", "bnQ": "Vision Therapy কী?", "enA": "Vision Therapy is a planned and supervised program of visual exercises and activities intended to improve certain vision and eye-coordination problems.", "bnA": "Vision Therapy হলো নির্দিষ্ট কিছু দৃষ্টিগত ও চোখের সমন্বয়-সংক্রান্ত সমস্যা উন্নত করার জন্য পরিকল্পিত, পর্যবেক্ষণাধীন চোখের ব্যায়াম ও কার্যক্রমের একটি পদ্ধতি।"},
+  {"cat": "therapy", "enQ": "What are some potential uses or benefits of Vision Therapy?", "bnQ": "Vision Therapy-এর সম্ভাব্য সুফল বা ব্যবহার কী কী?", "enA": "Depending on the individual problem, it may help with convergence insufficiency, binocular coordination, focusing ability, eye-movement coordination, some binocular-vision problems, eye-hand coordination, near-work coordination problems, selected visual skills in children, visual comfort, and individualized rehabilitation planning.", "bnA": "ব্যক্তির সমস্যার ধরন অনুযায়ী Vision Therapy convergence insufficiency, দুই চোখ একসঙ্গে ব্যবহার করার দক্ষতা, চোখের ফোকাস করার দক্ষতা, চোখের নড়াচড়ার সমন্বয়, কিছু binocular vision সমস্যা, চোখ-হাতের সমন্বয়, কাছের কাজের সময় চোখের সমন্বয়জনিত সমস্যা, শিশুদের নির্দিষ্ট visual skill এবং visual comfort উন্নত করতে সহায়তা করতে পারে। প্রয়োজন অনুযায়ী ব্যক্তিকেন্দ্রিক treatment plan-ও তৈরি করা যায়।"},
+  {"cat": "therapy", "enQ": "Is Vision Therapy a treatment for every eye disease?", "bnQ": "Vision Therapy কি সব ধরনের চোখের রোগের চিকিৎসা?", "enA": "No. Vision Therapy is not a treatment for every eye disease and is not a substitute for glasses, cataract treatment, or treatment of other eye diseases. It should be used in appropriate cases after proper diagnosis.", "bnA": "না। Vision Therapy সব ধরনের চোখের রোগের চিকিৎসা নয় এবং চশমার পাওয়ার, ছানি বা চোখের অন্যান্য রোগের চিকিৎসার বিকল্পও নয়। সঠিক রোগ নির্ণয়ের পর উপযুক্ত ক্ষেত্রে এটি ব্যবহার করা উচিত।"},
+  {"cat": "symptoms", "enQ": "What is double vision (Diplopia)?", "bnQ": "ডাবল ভিশন বা একটি জিনিস দুইটি দেখা কী?", "enA": "Seeing one object as two instead of one is called double vision or Diplopia. It can occur in one eye or with both eyes.", "bnA": "কোনো একটি বস্তু স্বাভাবিকভাবে একটির পরিবর্তে দুইটি দেখা গেলে তাকে ডাবল ভিশন (Diplopia) বলে। এটি এক চোখে বা দুই চোখেই হতে পারে।"},
+  {"cat": "symptoms", "enQ": "What can cause double vision?", "bnQ": "ডাবল ভিশন কেন হতে পারে?", "enA": "Possible causes include refractive problems, eye-muscle weakness, eye-alignment problems, nerve problems, diabetes, some thyroid conditions, head injury, and other causes.", "bnA": "চোখের পাওয়ারের সমস্যা, চোখের পেশির দুর্বলতা, চোখের alignment-এর সমস্যা, স্নায়ুর সমস্যা, ডায়াবেটিস, থাইরয়েডের কিছু সমস্যা, মাথায় আঘাতসহ বিভিন্ন কারণে ডাবল ভিশন হতে পারে।"},
+  {"cat": "symptoms", "enQ": "What does it suggest if double vision disappears when one eye is closed?", "bnQ": "এক চোখ বন্ধ করলে যদি ডাবল ভিশন চলে যায়, তাহলে কী বোঝায়?", "enA": "This usually suggests Binocular Diplopia, which may be related to eye coordination or alignment.", "bnA": "সাধারণত এটি Binocular Diplopia-এর ইঙ্গিত। অর্থাৎ দুই চোখের সমন্বয় বা alignment-এ সমস্যা থাকতে পারে।"},
+  {"cat": "symptoms", "enQ": "What if double vision remains even when one eye is closed?", "bnQ": "এক চোখ বন্ধ করলেও যদি দুইটি দেখা যায়, তাহলে কী হতে পারে?", "enA": "This is called Monocular Diplopia. It may be associated with problems involving the cornea, lens, dry eye, or another ocular condition.", "bnA": "এটিকে Monocular Diplopia বলা হয়। চোখের কর্নিয়া, লেন্স, শুষ্ক চোখ বা অন্য কোনো চোখের সমস্যার কারণে এটি হতে পারে।"},
+  {"cat": "symptoms", "enQ": "Will new glasses always fix double vision?", "bnQ": "ডাবল ভিশন হলে কি শুধু নতুন চশমা নিলেই ঠিক হয়ে যায়?", "enA": "Not always. Treatment depends on the cause, so an eye examination is important to determine why double vision is occurring.", "bnA": "সবসময় নয়। কারণ অনুযায়ী চিকিৎসা ভিন্ন হতে পারে। তাই ডাবল ভিশনের কারণ নির্ণয়ের জন্য চক্ষু বিশেষজ্ঞের পরীক্ষা করা জরুরি।"},
+  {"cat": "emergency", "enQ": "What should I do if double vision starts suddenly?", "bnQ": "হঠাৎ করে ডাবল ভিশন শুরু হলে কী করা উচিত?", "enA": "Sudden new double vision should not be ignored. Prompt medical care is especially important if it occurs with severe headache, drooping eyelid, dizziness, slurred speech, weakness, or numbness.", "bnA": "হঠাৎ নতুন করে ডাবল ভিশন শুরু হলে অবহেলা করা উচিত নয়। বিশেষ করে এর সঙ্গে তীব্র মাথাব্যথা, চোখের পাতা ঝুলে যাওয়া, মাথা ঘোরা, কথা জড়ানো, দুর্বলতা বা অসাড়তা থাকলে দ্রুত চিকিৎসা নেওয়া উচিত।"},
+  {"cat": "lowvision", "enQ": "What is Low Vision?", "bnQ": "লো ভিশন (Low Vision) কী?", "enA": "Low Vision refers to reduced vision that does not return to a normal level even after appropriate treatment, glasses, or contact lenses and that causes difficulty with everyday activities.", "bnA": "চোখের চিকিৎসা, চশমা বা কন্টাক্ট লেন্স ব্যবহারের পরও যদি দৃষ্টিশক্তি স্বাভাবিক পর্যায়ে ফিরে না আসে এবং দৈনন্দিন কাজ করতে সমস্যা হয়, তাকে Low Vision বলা হয়।"},
+  {"cat": "lowvision", "enQ": "How is Low Vision described in the provided material?", "bnQ": "Low Vision সম্পর্কে এই তথ্যসূত্রে কীভাবে ব্যাখ্যা করা হয়েছে?", "enA": "The provided material describes Low Vision as a persistent reduction in vision that cannot be fully corrected by ordinary glasses, contact lenses, medicine, or surgery. It also cites a visual-acuity threshold of 6/18 or worse in the better eye after best treatment.", "bnA": "প্রদত্ত তথ্যে Low Vision-কে এমন স্থায়ী দৃষ্টিশক্তি হ্রাস হিসেবে বর্ণনা করা হয়েছে, যা সাধারণ চশমা, কন্টাক্ট লেন্স, ওষুধ বা অপারেশনের মাধ্যমে পুরোপুরি ঠিক করা সম্ভব হয় না। সেখানে সর্বোত্তম চিকিৎসার পর ভালো চোখে Visual Acuity ৬/১৮ বা তার কম থাকার কথাও উল্লেখ করা হয়েছে।"},
+  {"cat": "lowvision", "enQ": "What are some major causes of Low Vision?", "bnQ": "Low Vision-এর প্রধান কারণ কী কী?", "enA": "The provided material lists cataract, glaucoma, diabetic retinopathy, age-related macular degeneration, retinal diseases, and congenital eye problems among possible causes.", "bnA": "ছানি, গ্লুকোমা, ডায়াবেটিক রেটিনোপ্যাথি, বয়সজনিত ম্যাকুলার ডিজেনারেশন, রেটিনার বিভিন্ন রোগ এবং চোখের জন্মগত সমস্যাসহ বিভিন্ন কারণে Low Vision হতে পারে।"},
+  {"cat": "lowvision", "enQ": "Can Low Vision always be fully corrected with glasses?", "bnQ": "Low Vision কি চশমা দিয়ে পুরোপুরি ভালো করা যায়?", "enA": "Not always. When vision remains reduced after the best ordinary spectacle correction, Low Vision aids such as magnifiers, special glasses, or other assistive devices may make daily tasks easier.", "bnA": "সবসময় নয়। সাধারণ চশমায় যতটা দৃষ্টি সংশোধন সম্ভব তা করার পরও দৃষ্টি কম থাকলে Low Vision Aid যেমন magnifier, বিশেষ চশমা বা অন্যান্য সহায়ক device ব্যবহার করে দৈনন্দিন কাজ সহজ করা যায়।"},
+  {"cat": "lowvision", "enQ": "What difficulties can Low Vision cause?", "bnQ": "Low Vision হলে কী কী সমস্যা হতে পারে?", "enA": "It can make it difficult to read books or mobile text, recognize faces, watch television, cook, move around, or cross roads outdoors.", "bnA": "বই বা মোবাইলের লেখা পড়া, মুখ চিনতে পারা, টেলিভিশন দেখা, রান্না করা, চলাফেরা বা বাইরে রাস্তা পারাপারে সমস্যা হতে পারে।"},
+  {"cat": "lowvision", "enQ": "What should someone with Low Vision do?", "bnQ": "Low Vision হলে কী করা উচিত?", "enA": "A comprehensive eye examination is needed first to identify the cause. Depending on the findings, treatment, Low Vision Rehabilitation, and suitable assistive devices may help make everyday life easier.", "bnA": "প্রথমে চোখের পূর্ণ পরীক্ষা করে দৃষ্টিশক্তি কমে যাওয়ার কারণ নির্ণয় করা জরুরি। এরপর প্রয়োজন অনুযায়ী চিকিৎসা, Low Vision Rehabilitation এবং উপযুক্ত সহায়ক যন্ত্র ব্যবহার করলে অনেক ক্ষেত্রে দৈনন্দিন জীবনযাত্রা সহজ করা সম্ভব।"},
+  {"cat": "optometry", "enQ": "Who are optometrists?", "bnQ": "অপ্টোমেট্রিস্ট কারা?", "enA": "Optometrists are eye-care professionals trained to assess vision and eye health and to identify and manage refractive errors.", "bnA": "অপ্টোমেট্রিস্ট হলেন দৃষ্টিশক্তি ও চোখের স্বাস্থ্যের মূল্যায়ন, refractive error নির্ণয় ও ব্যবস্থাপনায় প্রশিক্ষিত eye-care professionals।"},
+  {"cat": "optometry", "enQ": "What are the main responsibilities of an optometrist?", "bnQ": "অপ্টোমেট্রিস্টের প্রধান কাজ কী কী?", "enA": "Their work may include testing vision, determining spectacle power, assessing and managing spectacle and contact-lens needs, performing primary eye-health assessment, evaluating binocular vision and accommodation, testing color vision, screening children's vision, referring suspected eye disease to an appropriate eye specialist, contributing to vision therapy or visual rehabilitation where appropriate, and providing visual advice and follow-up.", "bnA": "অপ্টোমেট্রিস্টের কাজের মধ্যে দৃষ্টিশক্তি পরীক্ষা, চশমার পাওয়ার নির্ণয়, চশমা ও কন্টাক্ট লেন্সের প্রয়োজন নির্ধারণ ও ব্যবস্থাপনা, চোখের প্রাথমিক স্বাস্থ্য পরীক্ষা, Binocular vision ও accommodation মূল্যায়ন, Color vision পরীক্ষা, শিশুদের vision screening, চোখের রোগের সন্দেহ হলে উপযুক্ত চক্ষু বিশেষজ্ঞের কাছে referral, প্রয়োজন অনুযায়ী vision therapy বা visual rehabilitation-এ কাজ এবং রোগীর দৃষ্টিগত সমস্যা সম্পর্কে পরামর্শ ও follow-up অন্তর্ভুক্ত থাকতে পারে।"},
+  {"cat": "instruments", "enQ": "What does HVFA (Humphrey Visual Field Analyzer) do?", "bnQ": "HVFA (Humphrey Visual Field Analyzer) কী কাজ করে?", "enA": "HVFA measures peripheral vision. It is widely used to identify and monitor visual-field loss, particularly in glaucoma, and can also help assess deficits related to the optic nerve or brain.", "bnA": "HVFA রোগীর peripheral vision বা পার্শ্বীয় দৃষ্টিশক্তি পরিমাপ করতে ব্যবহৃত হয়। বিশেষ করে Glaucoma-তে দৃষ্টিসীমার কোন অংশ কমেছে তা শনাক্ত ও পর্যবেক্ষণে এটি গুরুত্বপূর্ণ। Optic nerve বা মস্তিষ্কের সমস্যাজনিত visual field ঘাটতি মূল্যায়নেও এটি ব্যবহার করা হয়।"},
+  {"cat": "instruments", "enQ": "What does OCT (Optical Coherence Tomography) do?", "bnQ": "OCT (Optical Coherence Tomography) কী কাজ করে?", "enA": "OCT is a non-invasive imaging technology that produces high-resolution cross-sectional and three-dimensional views of retinal structures. It helps assess the retina, macula, and optic nerve and is used in conditions such as diabetic retinopathy, AMD, and glaucoma.", "bnA": "OCT একটি non-invasive imaging technology, যা retina-এর বিভিন্ন স্তরের high-resolution cross-sectional ও 3D image তৈরি করে। Retina, macula এবং optic nerve-এর সূক্ষ্ম গঠন ও পুরুত্ব পর্যবেক্ষণে এটি সাহায্য করে এবং diabetic retinopathy, AMD ও glaucoma মূল্যায়নে ব্যবহৃত হয়।"},
+  {"cat": "instruments", "enQ": "What does CFP (Color Fundus Photography) do?", "bnQ": "CFP (Color Fundus Photography) কী কাজ করে?", "enA": "CFP captures color images of the fundus, including the retina, retinal blood vessels, and optic disc. These images can document current eye health, support comparison over time, and help identify changes related to diabetes or high blood pressure.", "bnA": "CFP-এর মাধ্যমে চোখের fundus, retina, retinal blood vessels এবং optic disc-এর রঙিন ও স্পষ্ট ছবি তোলা হয়। বর্তমান অবস্থা নথিবদ্ধ করা, আগের ছবির সঙ্গে তুলনা করা এবং diabetes বা high blood pressure-জনিত পরিবর্তন শনাক্ত করতে এটি ব্যবহার করা হয়।"},
+  {"cat": "instruments", "enQ": "What does the IOL Master do?", "bnQ": "IOL Master কী কাজ করে?", "enA": "The IOL Master is used before cataract surgery to measure parameters such as axial length, corneal curvature, and anterior chamber depth so that the power of the intraocular lens can be calculated.", "bnA": "IOL Master ছানি অপারেশনের আগে চোখের axial length, corneal curvature এবং anterior chamber depth-এর মতো গুরুত্বপূর্ণ মাপ নির্ণয় করতে ব্যবহৃত হয়, যাতে বসানো Intraocular Lens (IOL)-এর সঠিক power হিসাব করা যায়।"},
+  {"cat": "instruments", "enQ": "What does Keratometry measure?", "bnQ": "Keratometry কী পরিমাপ করে?", "enA": "Keratometry measures the curvature of the cornea. It helps assess astigmatism, supports contact-lens fitting and pre-operative planning, and may contribute to evaluation of corneal conditions such as keratoconus.", "bnA": "Keratometry চোখের সামনের স্বচ্ছ অংশ Cornea-এর curvature পরিমাপ করে। Astigmatism মূল্যায়ন, contact lens fitting, cataract বা refractive surgery-এর pre-operative planning এবং Keratoconus-এর মতো corneal condition মূল্যায়নে এটি সহায়ক।"}
+];
+
+const categories = {
+  all:{en:'All questions',bn:'সব প্রশ্ন'},
+  power:{en:'Eye power',bn:'চোখের পাওয়ার'},
+  children:{en:'Children',bn:'শিশু'},
+  screen:{en:'Screen use',bn:'স্ক্রিন ব্যবহার'},
+  lens:{en:'Glasses & lenses',bn:'চশমা ও লেন্স'},
+  disease:{en:'Common conditions',bn:'সাধারণ সমস্যা'},
+  glaucoma:{en:'Glaucoma',bn:'গ্লুকোমা'},
+  retina:{en:'Retina & diabetes',bn:'রেটিনা ও ডায়াবেটিস'},
+  symptoms:{en:'Symptoms',bn:'উপসর্গ'},
+  nightcolor:{en:'Night & color vision',bn:'রাত ও বর্ণদৃষ্টি'},
+  nutrition:{en:'Vitamin A',bn:'ভিটামিন A'},
+  therapy:{en:'Vision therapy',bn:'ভিশন থেরাপি'},
+  lowvision:{en:'Low vision',bn:'লো ভিশন'},
+  optometry:{en:'Optometrist',bn:'অপ্টোমেট্রিস্ট'},
+  instruments:{en:'Eye instruments',bn:'চোখের যন্ত্র'},
+  emergency:{en:'Emergency',bn:'জরুরি'}
+};
+let currentLang='en', currentCat='all';
+const faqList=document.getElementById('faqList'), faqTabs=document.getElementById('faqTabs'), faqSearch=document.getElementById('faqSearch'), faqEmpty=document.getElementById('faqEmpty');
+
+function renderTabs(){faqTabs.innerHTML='';Object.entries(categories).forEach(([key,label])=>{const b=document.createElement('button');b.className='faq-tab'+(currentCat===key?' active':'');b.textContent=label[currentLang];b.onclick=()=>{currentCat=key;renderTabs();renderFAQs()};faqTabs.appendChild(b)})}
+function renderFAQs(){const term=faqSearch.value.trim().toLowerCase();const filtered=faqData.filter(x=>{const catOk=currentCat==='all'||x.cat===currentCat;const q=(currentLang==='en'?x.enQ:x.bnQ).toLowerCase();const a=(currentLang==='en'?x.enA:x.bnA).toLowerCase();return catOk&&(!term||q.includes(term)||a.includes(term))});faqList.innerHTML='';faqEmpty.hidden=filtered.length>0;filtered.forEach((x,i)=>{const item=document.createElement('article');item.className='faq-item';const q=currentLang==='en'?x.enQ:x.bnQ, a=currentLang==='en'?x.enA:x.bnA;item.innerHTML=`<button class="faq-q" aria-expanded="false"><span>${q}</span><span>+</span></button><div class="faq-a"><div><p>${a}</p></div></div>`;item.querySelector('.faq-q').onclick=()=>{const open=item.classList.toggle('open');item.querySelector('.faq-q').setAttribute('aria-expanded',open)};faqList.appendChild(item)})}
+function applyLanguage(lang){currentLang=lang;document.body.classList.toggle('bn',lang==='bn');document.documentElement.lang=lang==='bn'?'bn':'en';document.querySelectorAll('[data-en][data-bn]').forEach(el=>{el.textContent=el.dataset[lang]});document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===lang));faqSearch.placeholder=lang==='bn'?'খুঁজুন: মায়োপিয়া, গ্লুকোমা, লেন্স...':'Search: myopia, glaucoma, lens...';renderTabs();renderFAQs();localStorage.setItem('siteLang',lang)}
+document.querySelectorAll('.lang-btn').forEach(b=>b.addEventListener('click',()=>applyLanguage(b.dataset.lang)));
+faqSearch.addEventListener('input',renderFAQs);
+const menuBtn=document.getElementById('menuBtn'), mainNav=document.getElementById('mainNav');menuBtn.addEventListener('click',()=>mainNav.classList.toggle('open'));mainNav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mainNav.classList.remove('open')));
+const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+document.getElementById('year').textContent=new Date().getFullYear();
+applyLanguage(localStorage.getItem('siteLang')||'en');
+
+</script>
+</body>
+</html>
