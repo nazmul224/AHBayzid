@@ -300,6 +300,108 @@ footer{margin:0 24px 24px;background:var(--ink);color:#dbe8e7;border-radius:36px
   footer{border-radius:28px;padding-top:50px}.footer-grid{grid-template-columns:1fr;gap:30px}.footer-grid>div:first-child{grid-column:auto}.footer-bottom{flex-direction:column}.main-visual:after{font-size:8px}
 }
 </style>
+
+<style>
+/* Added sections only — original website design remains unchanged */
+.added-gallery{padding:118px 0 40px}
+.added-gallery-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:30px}
+.added-gallery-head h2{margin:0;font-size:clamp(40px,5vw,68px);line-height:.98;letter-spacing:-.055em}
+.added-gallery-head p{margin:10px 0 0;color:var(--muted);font-size:14px}
+.added-gallery-layout{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:16px}
+.added-gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.added-gallery-card{margin:0}
+.added-gallery-card img{width:100%;height:100%;object-fit:cover;border-radius:20px;background:#dcefea}
+.added-gallery-card h3{margin:12px 0 5px;font-size:14px}
+.added-gallery-card p{margin:0;color:var(--muted);font-size:11px;line-height:1.55}
+.added-working-card{padding:26px;border:1px solid var(--line);border-radius:24px;background:var(--aqua)}
+.added-working-card h3{margin:0 0 24px;font-size:20px}
+.added-working-card strong{display:block;margin-top:16px;font-size:12px}
+.added-working-card p{margin:3px 0;color:#405b5f;font-size:12px}
+.added-working-card small{display:block;margin-top:24px;color:var(--muted);font-size:10px;line-height:1.55}
+
+.added-eye-intro{padding:40px 0 0}
+.added-eye-intro-shell{display:grid;grid-template-columns:400px 1fr;gap:0;overflow:hidden;border:1px solid var(--line);border-radius:28px;background:#fff}
+.added-eye-intro-image{min-height:230px}
+.added-eye-intro-image img{width:100%;height:100%;object-fit:cover}
+.added-eye-intro-copy{padding:34px}
+.added-eye-intro-copy h2{margin:0;font-size:30px;line-height:1.05;letter-spacing:-.04em}
+.added-eye-intro-copy p{margin:14px 0 20px;color:var(--muted);font-size:13px;max-width:760px}
+
+@media(max-width:1100px){
+  .added-gallery-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:820px){
+  .added-gallery{padding-top:88px}
+  .added-gallery-layout{grid-template-columns:1fr}
+  .added-eye-intro-shell{grid-template-columns:1fr}
+  .added-eye-intro-image{min-height:300px}
+}
+@media(max-width:560px){
+  .added-gallery{padding-top:76px}
+  .added-gallery-head h2{font-size:38px}
+  .added-gallery-grid{grid-template-columns:1fr}
+  .added-gallery-card img{height:220px}
+  .added-working-card{border-radius:20px}
+  .added-eye-intro-shell{border-radius:22px}
+  .added-eye-intro-copy{padding:26px}
+}
+</style>
+
+
+<style>
+/* Requested information architecture additions; original visual system retained */
+.hero-credential-overlay{
+  position:absolute;left:22px;top:22px;z-index:4;
+  padding:13px 16px;border-radius:12px;background:rgba(13,29,31,.86);
+  color:#fff;backdrop-filter:blur(10px);display:flex;flex-direction:column;gap:2px
+}
+.hero-credential-overlay strong{font-size:14px}
+.hero-credential-overlay span{font-size:10px;letter-spacing:.08em;color:var(--lime);font-weight:800}
+.about-social-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+#about .expertise-grid{display:grid}
+#education,.contact-section,.final-note,.emergency-section{display:block}
+.main-nav a[href="#home"]{color:var(--brand)}
+@media(max-width:560px){
+  .hero-credential-overlay{left:12px;top:12px;padding:10px 12px}
+}
+</style>
+
+
+<style>
+/* 6-image Gallery — no captions, no Working Time card */
+.six-image-gallery{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:16px;
+}
+.six-image-item{
+  margin:0;
+  height:260px;
+  overflow:hidden;
+  border-radius:24px;
+  background:#dcefea;
+  border:1px solid var(--line);
+}
+.six-image-item img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+  transition:transform .45s cubic-bezier(.2,.8,.2,1);
+}
+.six-image-item:hover img{
+  transform:scale(1.035);
+}
+@media(max-width:900px){
+  .six-image-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .six-image-item{height:240px}
+}
+@media(max-width:560px){
+  .six-image-gallery{grid-template-columns:1fr;gap:12px}
+  .six-image-item{height:230px;border-radius:18px}
+}
+</style>
+
 </head>
 <body>
   <div class="topbar">
@@ -320,11 +422,14 @@ footer{margin:0 24px 24px;background:var(--ink);color:#dbe8e7;border-radius:36px
       </a>
 
       <nav class="main-nav" id="mainNav">
+        <a href="#home" data-en="Home" data-bn="হোম">Home</a>
         <a href="#about" data-en="About" data-bn="পরিচিতি">About</a>
-        <a href="#eye-health" data-en="Eye Health" data-bn="চোখ নিয়ে জানুন">Eye Health</a>
-        <a href="#faq" data-en="Questions" data-bn="জিজ্ঞাসা">Questions</a>
-        <a href="#specialists" data-en="Specialists" data-bn="কোন বিশেষজ্ঞ">Specialists</a>
-        <a href="#care-bd" data-en="Eye Care in BD" data-bn="বাংলাদেশে সেবা">Eye Care in BD</a>
+        <a href="#gallery" data-en="Gallery" data-bn="গ্যালারি">Gallery</a>
+        <a href="#eye-health" data-en="Eye Health" data-bn="চোখের স্বাস্থ্য">Eye Health</a>
+        <a href="#faq" data-en="Question" data-bn="প্রশ্ন">Question</a>
+        <a href="#specialists" data-en="Specialties" data-bn="বিশেষজ্ঞ">Specialties</a>
+        <a href="#care-bd" data-en="Eye Care in BD" data-bn="বাংলাদেশে চক্ষুসেবা">Eye Care in BD</a>
+        <a href="#contact" data-en="Contact" data-bn="যোগাযোগ">Contact</a>
       </nav>
 
       <div class="nav-actions">
@@ -342,7 +447,7 @@ footer{margin:0 24px 24px;background:var(--ink);color:#dbe8e7;border-radius:36px
       <div class="container hero-grid">
         <div class="hero-content reveal">
           <div class="eyebrow" data-en="CLINICAL OPTOMETRIST • DHAKA" data-bn="ক্লিনিক্যাল অপটোমেট্রি • ঢাকা">CLINICAL OPTOMETRIST • DHAKA</div>
-          <h1 data-en="Clearer vision begins with the right eye assessment." data-bn="সঠিক চোখ পরীক্ষাই পরিষ্কার দৃষ্টির প্রথম ধাপ।">Clearer vision begins with the right eye assessment.</h1>
+          <h1 data-en="Akram Hossain Bayzid | Optometrist" data-bn="আকরাম হোসেন বায়জিদ | অপটোমেট্রিস্ট">Akram Hossain Bayzid | Optometrist</h1>
           <p class="hero-lead" data-en="Professional optometric care, clinical support and practical eye-health education focused on accurate assessment, patient comfort and responsible referral." data-bn="সঠিক দৃষ্টি মূল্যায়ন, রোগীর স্বাচ্ছন্দ্য এবং প্রয়োজন অনুযায়ী উপযুক্ত বিশেষজ্ঞের কাছে রেফারেলের ওপর ভিত্তি করে পেশাদার অপটোমেট্রিক সেবা, ক্লিনিক্যাল সহায়তা ও চোখের স্বাস্থ্যবিষয়ক তথ্য।">Professional optometric care, clinical support and practical eye-health education focused on accurate assessment, patient comfort and responsible referral.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#faq" data-en="Explore Eye Questions" data-bn="চোখের প্রশ্নগুলো দেখুন">Explore Eye Questions</a>
@@ -356,7 +461,12 @@ footer{margin:0 24px 24px;background:var(--ink);color:#dbe8e7;border-radius:36px
 
         <div class="hero-visual reveal">
           <div class="visual-card main-visual">
-            <img src="/Images/heroimage.png" alt="Professional eye care illustration" />
+            <img src="/Images/heroimage.jpg
+            " alt="Professional eye care illustration" />
+            <div class="hero-credential-overlay">
+              <strong data-en="Optometrist" data-bn="অপটোমেট্রিস্ট">Optometrist</strong>
+              <span>BPH, DOT (IIEIH)</span>
+            </div>
           </div>
          
         </div>
@@ -383,6 +493,10 @@ footer{margin:0 24px 24px;background:var(--ink);color:#dbe8e7;border-radius:36px
           <div class="quote-box">
             <p data-en="Professional goal: to support accurate vision care, improve patient outcomes and continuously develop clinical knowledge, technical skill and professional competence." data-bn="পেশাগত লক্ষ্য: সঠিক দৃষ্টিসেবা প্রদান, রোগীর অবস্থার উন্নতি সাধন এবং ক্লিনিক্যাল জ্ঞান, প্রযুক্তিগত দক্ষতা ও পেশাগত সক্ষমতার ধারাবাহিক উন্নয়ন।">Professional goal: to support accurate vision care, improve patient outcomes and continuously develop clinical knowledge, technical skill and professional competence.</p>
           </div>
+          <div class="about-social-links">
+            <a class="btn btn-primary" href="https://www.linkedin.com/in/akram-hossain-bayzid" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a class="btn btn-secondary" href="https://www.facebook.com/akramhossainbayzid01" target="_blank" rel="noopener noreferrer">Facebook</a>
+          </div>
         </div>
       </div>
 
@@ -391,6 +505,58 @@ footer{margin:0 24px 24px;background:var(--ink);color:#dbe8e7;border-radius:36px
         <article class="expertise-card reveal"><span>02</span><h3 data-en="Pre & post-operative assessment" data-bn="অস্ত্রোপচারের আগে ও পরে মূল্যায়ন">Pre & post-operative assessment</h3><p data-en="Support with refraction, diagnostic assessment, follow-up and pre/post-operative patient evaluation where applicable." data-bn="প্রযোজ্য ক্ষেত্রে রিফ্র্যাকশন, রোগ নির্ণয়মূলক মূল্যায়ন, ফলো-আপ এবং অস্ত্রোপচারের আগে ও পরে রোগী মূল্যায়নে সহায়তা।">Support with refraction, diagnostic assessment, follow-up and pre/post-operative patient evaluation where applicable.</p></article>
         <article class="expertise-card reveal"><span>03</span><h3 data-en="Diagnostic instruments" data-bn="ডায়াগনস্টিক যন্ত্র">Diagnostic instruments</h3><p data-en="Experienced with OCT, HVFA, Pentacam, CFP, IOL Master and Manual Keratometry for clinical testing and evaluation." data-bn="OCT, HVFA, Pentacam, CFP, IOL Master এবং Manual Keratometry ব্যবহার করে ক্লিনিক্যাল পরীক্ষা ও মূল্যায়নে অভিজ্ঞ।">Experienced with OCT, HVFA, Pentacam, CFP, IOL Master and Manual Keratometry for clinical testing and evaluation.</p></article>
         <article class="expertise-card reveal"><span>04</span><h3 data-en="Team-based care" data-bn="সমন্বিত চিকিৎসাসেবা">Team-based care</h3><p data-en="Works collaboratively with ophthalmologists, optometrists and other clinical professionals to support patient-centred, evidence-informed eye care." data-bn="রোগীকেন্দ্রিক ও প্রমাণভিত্তিক চোখের সেবা নিশ্চিত করতে চক্ষুবিশেষজ্ঞ, অপটোমেট্রিস্ট ও অন্যান্য ক্লিনিক্যাল কর্মীদের সঙ্গে সমন্বিতভাবে কাজ করেন।">Works collaboratively with ophthalmologists, optometrists and other clinical professionals to support patient-centred, evidence-informed eye care.</p></article>
+      </div>
+    </section>
+
+
+    <!-- Added from the supplied reference image. Existing sections remain unchanged. -->
+
+    <section class="added-gallery" id="gallery">
+      <div class="container">
+        <div class="added-gallery-head reveal">
+          <div>
+            <div class="eyebrow" data-en="PROFESSIONAL JOURNEY" data-bn="পেশাগত যাত্রা">PROFESSIONAL JOURNEY</div>
+            <h2 data-en="Gallery" data-bn="গ্যালারি">Gallery</h2>
+            <p data-en="Moments from my professional journey" data-bn="আমার পেশাগত যাত্রার কিছু মুহূর্ত">Moments from my professional journey</p>
+          </div>
+        </div>
+
+        <div class="six-image-gallery">
+          <figure class="six-image-item reveal">
+            <img src="/Images/img02.jpg" alt="Eye examination">
+          </figure>
+          <figure class="six-image-item reveal">
+            <img src="/Images/img03.jpg" alt="Patient consultation">
+          </figure>
+          <figure class="six-image-item reveal">
+            <img src="/Images/img04.jpg" alt="Refraction assessment">
+          </figure>
+          <figure class="six-image-item reveal">
+            <img src="/Images/img05.jpeg" alt="Eye clinic setup">
+          </figure>
+          <figure class="six-image-item reveal">
+            <img src="/Images/img06.jpg" alt="Eye diagnostic equipment">
+          </figure>
+          <figure class="six-image-item reveal">
+            <img src="/Images/img01.jpeg" alt="Patient care">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+<section class="added-eye-intro">
+      <div class="container">
+        <div class="added-eye-intro-shell reveal">
+          <div class="added-eye-intro-image">
+            <img src="/Images/dd.jpg" alt="Human eye">
+          </div>
+          <div class="added-eye-intro-copy">
+            <div class="eyebrow" data-en="EYE BASICS" data-bn="চোখ সম্পর্কে">EYE BASICS</div>
+            <h2 data-en="What is the Eye?" data-bn="চোখ কী?">What is the Eye?</h2>
+            <p data-en="The eye is a remarkable organ that helps us see, experience colors, and connect with the world around us. It works like a camera, capturing light and sending it to the brain, where it is transformed into the images we see." data-bn="চোখ একটি অসাধারণ অঙ্গ, যা আমাদের দেখতে, রং অনুভব করতে এবং চারপাশের পৃথিবীর সঙ্গে সংযুক্ত হতে সাহায্য করে। এটি ক্যামেরার মতো আলো গ্রহণ করে মস্তিষ্কে পাঠায়, যেখানে সেই তথ্য আমরা যে ছবি দেখি তাতে রূপান্তরিত হয়।">The eye is a remarkable organ that helps us see, experience colors, and connect with the world around us. It works like a camera, capturing light and sending it to the brain, where it is transformed into the images we see.</p>
+            <a class="btn btn-primary" href="#eye-health" data-en="Learn More →" data-bn="আরও জানুন →">Learn More →</a>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -596,7 +762,17 @@ footer{margin:0 24px 24px;background:var(--ink);color:#dbe8e7;border-radius:36px
         <p data-en="Professional optometry, patient education and eye-health guidance." data-bn="পেশাদার অপটোমেট্রি, রোগী শিক্ষা ও চোখের স্বাস্থ্যবিষয়ক নির্দেশনা।">Professional optometry, patient education and eye-health guidance.</p>
       </div>
       <div><strong data-en="Workplace" data-bn="কর্মস্থল">Workplace</strong><p>Ispahani Islamia Eye Institute & Hospital<br>Farmgate, Dhaka-1215</p></div>
-      <div><strong data-en="Quick links" data-bn="দ্রুত লিংক">Quick links</strong><a href="#eye-health" data-en="Eye Health" data-bn="চোখ নিয়ে জানুন">Eye Health</a><a href="#faq" data-en="Questions" data-bn="জিজ্ঞাসা">Questions</a><a href="#emergency" data-en="Emergency Guidance" data-bn="জরুরি নির্দেশনা">Emergency Guidance</a></div>
+      <div>
+        <strong data-en="All Links" data-bn="সকল লিংক">All Links</strong>
+        <a href="#home" data-en="Home" data-bn="হোম">Home</a>
+        <a href="#about" data-en="About" data-bn="পরিচিতি">About</a>
+        <a href="#gallery" data-en="Gallery" data-bn="গ্যালারি">Gallery</a>
+        <a href="#eye-health" data-en="Eye Health" data-bn="চোখের স্বাস্থ্য">Eye Health</a>
+        <a href="#faq" data-en="Question" data-bn="প্রশ্ন">Question</a>
+        <a href="#specialists" data-en="Specialties" data-bn="বিশেষজ্ঞ">Specialties</a>
+        <a href="#care-bd" data-en="Eye Care in BD" data-bn="বাংলাদেশে চক্ষুসেবা">Eye Care in BD</a>
+        <a href="#contact" data-en="Contact" data-bn="যোগাযোগ">Contact</a>
+      </div>
     </div>
     <div class="container footer-bottom"><span>© <span id="year"></span> Akram Hossain Bayzid.</span><span data-en="Educational information only — not a substitute for clinical examination." data-bn="শুধু শিক্ষামূলক তথ্য — ক্লিনিক্যাল পরীক্ষার বিকল্প নয়।">Educational information only — not a substitute for clinical examination.</span></div>
   </footer>
